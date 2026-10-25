@@ -1,3 +1,0 @@
-split,games,unique_players,players_also_in_train,both_players_seen_in_train_games,at_least_one_seen_in_train_games,neither_seen_in_train_games,at_least_one_seen_in_train_pct
-validation,2747,2600,467,206,1446,1301,52.63924281033855
-test,2725,2475,384,108,1022,1703,37.50458715596331

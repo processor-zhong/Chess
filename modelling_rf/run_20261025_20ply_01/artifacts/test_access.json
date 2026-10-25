@@ -1,5 +1,0 @@
-{
-  "unlocked_utc": "2026-10-25T08:19:53.892310+00:00",
-  "frozen_config_sha256": "962c49d7a4fe73ad664c83885cbde3cf30341102a8ca3f5befc556a5d9b82d2a",
-  "decision": "Both frozen models refitted on train+validation; no further selection permitted"
-}
