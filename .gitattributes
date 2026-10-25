@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.ipynb -text
+*.csv -text
+*.gz binary
+*.joblib binary
+*.png binary

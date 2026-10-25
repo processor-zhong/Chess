@@ -1,0 +1,231 @@
+[
+  {
+    "slug": "dummy_none",
+    "family": "dummy",
+    "weighting": "none",
+    "parameters": {
+      "constant": null,
+      "random_state": null,
+      "strategy": "prior"
+    },
+    "fit_seconds": 0.008579254150390625
+  },
+  {
+    "slug": "logistic_none",
+    "family": "logistic",
+    "weighting": "none",
+    "parameters": {
+      "C": 0.1,
+      "class_weight": null,
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": 0.0,
+      "max_iter": 3000,
+      "n_jobs": null,
+      "penalty": "deprecated",
+      "random_state": 42,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "fit_seconds": 0.3202393054962158
+  },
+  {
+    "slug": "logistic_balanced",
+    "family": "logistic",
+    "weighting": "balanced",
+    "parameters": {
+      "C": 0.1,
+      "class_weight": "balanced",
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": 0.0,
+      "max_iter": 3000,
+      "n_jobs": null,
+      "penalty": "deprecated",
+      "random_state": 42,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "fit_seconds": 0.2455735206604004
+  },
+  {
+    "slug": "gaussian_nb_none",
+    "family": "gaussian_nb",
+    "weighting": "none",
+    "parameters": {
+      "priors": null,
+      "var_smoothing": 0.1
+    },
+    "fit_seconds": 0.15105509757995605
+  },
+  {
+    "slug": "gaussian_nb_balanced",
+    "family": "gaussian_nb",
+    "weighting": "balanced",
+    "parameters": {
+      "priors": null,
+      "var_smoothing": 0.1
+    },
+    "fit_seconds": 0.17908930778503418
+  },
+  {
+    "slug": "decision_tree_none",
+    "family": "decision_tree",
+    "weighting": "none",
+    "parameters": {
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 3,
+      "max_features": null,
+      "max_leaf_nodes": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 5,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "random_state": 42,
+      "splitter": "best"
+    },
+    "fit_seconds": 0.20925426483154297
+  },
+  {
+    "slug": "decision_tree_balanced",
+    "family": "decision_tree",
+    "weighting": "balanced",
+    "parameters": {
+      "ccp_alpha": 0.0,
+      "class_weight": "balanced",
+      "criterion": "gini",
+      "max_depth": 3,
+      "max_features": null,
+      "max_leaf_nodes": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 5,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "random_state": 42,
+      "splitter": "best"
+    },
+    "fit_seconds": 0.22555112838745117
+  },
+  {
+    "slug": "random_forest_none",
+    "family": "random_forest",
+    "weighting": "none",
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 8,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 10,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 200,
+      "n_jobs": 4,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "fit_seconds": 1.8665940761566162
+  },
+  {
+    "slug": "random_forest_balanced",
+    "family": "random_forest",
+    "weighting": "balanced",
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": "balanced",
+      "criterion": "gini",
+      "max_depth": 8,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 10,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 200,
+      "n_jobs": 4,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "fit_seconds": 1.8254063129425049
+  },
+  {
+    "slug": "gradient_boosting_none",
+    "family": "gradient_boosting",
+    "weighting": "none",
+    "parameters": {
+      "categorical_features": "from_dtype",
+      "class_weight": null,
+      "early_stopping": false,
+      "interaction_cst": null,
+      "l2_regularization": 0.0,
+      "learning_rate": 0.1,
+      "loss": "log_loss",
+      "max_bins": 255,
+      "max_depth": null,
+      "max_features": 1.0,
+      "max_iter": 150,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 20,
+      "monotonic_cst": null,
+      "n_iter_no_change": 10,
+      "random_state": 42,
+      "scoring": "loss",
+      "tol": 1e-07,
+      "validation_fraction": 0.1,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "fit_seconds": 3.394519090652466
+  },
+  {
+    "slug": "gradient_boosting_balanced",
+    "family": "gradient_boosting",
+    "weighting": "balanced",
+    "parameters": {
+      "categorical_features": "from_dtype",
+      "class_weight": "balanced",
+      "early_stopping": false,
+      "interaction_cst": null,
+      "l2_regularization": 0.0,
+      "learning_rate": 0.1,
+      "loss": "log_loss",
+      "max_bins": 255,
+      "max_depth": null,
+      "max_features": 1.0,
+      "max_iter": 150,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 20,
+      "monotonic_cst": null,
+      "n_iter_no_change": 10,
+      "random_state": 42,
+      "scoring": "loss",
+      "tol": 1e-07,
+      "validation_fraction": 0.1,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "fit_seconds": 0.8249943256378174
+  }
+]
