@@ -1,0 +1,114 @@
+{
+  "upstream_commit": "5f86a39",
+  "upstream": "https://github.com/processor-zhong/Chess/tree/feature",
+  "input_columns": [
+    "white_rating",
+    "black_rating",
+    "rating_diff",
+    "rating_mean",
+    "rating_gap",
+    "rated_int",
+    "base_minutes",
+    "increment_seconds",
+    "log_base_minutes",
+    "white_elo_expectation",
+    "pawn_diff",
+    "knight_diff",
+    "bishop_diff",
+    "rook_diff",
+    "queen_diff",
+    "material_balance",
+    "bishop_pair_diff",
+    "mobility_diff",
+    "center_control_diff",
+    "king_shield_diff",
+    "doubled_pawn_diff",
+    "isolated_pawn_diff",
+    "passed_pawn_diff",
+    "castling_rights_diff",
+    "white_in_check",
+    "black_in_check",
+    "white_to_move"
+  ],
+  "pregame_columns": [
+    "white_rating",
+    "black_rating",
+    "rating_diff",
+    "rating_mean",
+    "rating_gap",
+    "rated_int",
+    "base_minutes",
+    "increment_seconds",
+    "log_base_minutes",
+    "white_elo_expectation"
+  ],
+  "position_columns": [
+    "pawn_diff",
+    "knight_diff",
+    "bishop_diff",
+    "rook_diff",
+    "queen_diff",
+    "material_balance",
+    "bishop_pair_diff",
+    "mobility_diff",
+    "center_control_diff",
+    "king_shield_diff",
+    "doubled_pawn_diff",
+    "isolated_pawn_diff",
+    "passed_pawn_diff",
+    "castling_rights_diff",
+    "white_in_check",
+    "black_in_check",
+    "white_to_move"
+  ],
+  "label_order": [
+    "black",
+    "draw",
+    "white"
+  ],
+  "excluded_model_fields": [
+    "progress",
+    "actual_progress",
+    "target",
+    "winner",
+    "game_id",
+    "game_index",
+    "checkpoint",
+    "ply",
+    "moves"
+  ],
+  "sampling": "Retrospective percentages of final SAN length; metadata only, not live fixed-ply evaluation",
+  "split": "Game-level stratified70/15/15, seed6001; same ID never crosses split",
+  "count_by_split": {
+    "test": 14179,
+    "train": 66346,
+    "validation": 14200
+  },
+  "count_by_checkpoint": {
+    "0.1": {
+      "test": 2803,
+      "train": 13146,
+      "validation": 2811
+    },
+    "0.25": {
+      "test": 2830,
+      "train": 13252,
+      "validation": 2837
+    },
+    "0.5": {
+      "test": 2849,
+      "train": 13317,
+      "validation": 2848
+    },
+    "0.75": {
+      "test": 2830,
+      "train": 13252,
+      "validation": 2837
+    },
+    "1.0": {
+      "test": 2867,
+      "train": 13379,
+      "validation": 2867
+    }
+  }
+}

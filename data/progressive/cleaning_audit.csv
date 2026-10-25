@@ -1,0 +1,8 @@
+,count
+raw_rows,20058
+duplicate_ids_removed,945
+invalid_target_removed,0
+invalid_rating_removed,0
+empty_move_list_removed,0
+invalid_time_control_removed,0
+clean_rows,19113

@@ -5,6 +5,7 @@ import json
 import subprocess
 import zipfile
 import argparse
+from src.progressive_baselines import project_root
 
 
 ADDED_FILES = [
@@ -13,18 +14,24 @@ ADDED_FILES = [
     'verify_baseline_models20.py', 'verify_decision_tree20.py',
     'build_submission20.py', 'docs/BASELINE_MODELS_ZH.md', 'docs/SUBMISSION_ZH.md',
     'src/baseline_models20.py', 'src/baseline_report20.py', 'tests/test_baseline_models20.py',
+    'Progressive_Baselines.ipynb', 'run_progressive_baselines.py', 'verify_progressive_baselines.py',
+    'src/progressive_baselines.py', 'src/progressive_features.py', 'tests/test_progressive_baselines.py',
+    'docs/PROGRESSIVE_BASELINES_ZH.md', 'docs/SUBMISSION_20PLY_ZH.md',
 ]
 RESULT_DIRS = [
     'modelling_baselines/run_20261025_20ply_01',
     'modelling_baselines/run_20261025_tree_01',
     'modelling_baselines/comparison_20ply',
+    'modelling_baselines/run_20261026_feature_01',
+    'data/progressive', 'artifacts/progressive',
 ]
 
 
 def submission_paths(root):
     # Fixed upstream commit contains data and the original RF handover.
     if (root / '.git').exists():
-        result = subprocess.run(['git', '-C', str(root), 'ls-tree', '-r', '--name-only', '-z', '0bf217e'],
+        git_root = str(root)[4:] if str(root).startswith('\\\\?\\') else str(root)
+        result = subprocess.run(['git', '-C', git_root, 'ls-tree', '-r', '--name-only', '-z', '0bf217e'],
                                 capture_output=True, check=True)
         paths = set(result.stdout.decode('utf-8').strip('\0').split('\0'))
     else:
@@ -57,7 +64,7 @@ def main():
     parser.add_argument('--output', default=None, help='New zip path; existing files are never overwritten')
     parser.add_argument('--refresh-snapshot-only', action='store_true')
     args = parser.parse_args()
-    root = Path(__file__).resolve().parent
+    root = project_root()
     paths = submission_paths(root)
     refresh_snapshot(root, paths)
     if args.refresh_snapshot_only:

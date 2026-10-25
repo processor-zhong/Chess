@@ -1,5 +1,8 @@
 # 小组后续操作说明
 
+当前主线请先阅读[PROGRESSIVE_BASELINES_ZH.md](PROGRESSIVE_BASELINES_ZH.md)，再打开根目录Progressive_Baselines.ipynb。
+本轮对齐feature的新27列输入，修复progress输入泄漏，分别列出none/balanced；下文为原20半回合历史版本交接。
+
 ## 新增提交入口
 
 本次传统模型比较请先读[SUBMISSION_ZH.md](SUBMISSION_ZH.md)，再打开根目录Baseline_Model_Comparison.ipynb。

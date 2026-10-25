@@ -1,0 +1,9 @@
+{
+  "sha256": {
+    "data/raw/games.csv": "e7aadff104a610afb5403caf81c1461babecb0dc87760ff5eea7dc0e7a4a8129",
+    "data/progressive/game_split.csv": "33f943b22948c20742231d1c15568062c710a6b30f5c03ec0a6b907274ce607f",
+    "data/progressive/cleaning_audit.csv": "fd09a32937a9913509b00554cc786b3d269a1babf5ed6bcfbcbf4073685988cf",
+    "data/progressive/snapshots.csv.gz": "5f32bebe456c7efe83e6f8f9e8ac76dbb2e897ba4583dea2d49e1a843b9962c7",
+    "artifacts/progressive/feature_contract.json": "75a98ed2eb02ec395b05a0427a22270f867f2d0d29a08e3b2f7a1d34a6f60bb7"
+  }
+}

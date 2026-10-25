@@ -4,7 +4,9 @@
 *.pt binary
 *.npz binary
 *.png binary
+*.gz binary
 # Frozen experiment outputs must keep the bytes used by their hash manifests.
 modelling_baselines/** -text
 Baseline_Model_Comparison.ipynb -text
+Progressive_Baselines.ipynb -text
 artifacts/repository_snapshot.json -text

@@ -5,10 +5,11 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import f1_score, log_loss, confusion_matrix
 from src.chess_data import sha256
+from src.progressive_baselines import project_root
 
 
 def main():
-    root=Path(__file__).resolve().parent
+    root=project_root()
     run=root/'modelling_rf/run_20261025_20ply_01'
     count=0
     def check(ok,message):

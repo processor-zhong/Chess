@@ -1,0 +1,93 @@
+{
+  "upstream_feature_commit": "5f86a39",
+  "input_columns": [
+    "white_rating",
+    "black_rating",
+    "rating_diff",
+    "rating_mean",
+    "rating_gap",
+    "rated_int",
+    "base_minutes",
+    "increment_seconds",
+    "log_base_minutes",
+    "white_elo_expectation",
+    "pawn_diff",
+    "knight_diff",
+    "bishop_diff",
+    "rook_diff",
+    "queen_diff",
+    "material_balance",
+    "bishop_pair_diff",
+    "mobility_diff",
+    "center_control_diff",
+    "king_shield_diff",
+    "doubled_pawn_diff",
+    "isolated_pawn_diff",
+    "passed_pawn_diff",
+    "castling_rights_diff",
+    "white_in_check",
+    "black_in_check",
+    "white_to_move"
+  ],
+  "parameters": {
+    "logistic": {
+      "C": 0.1,
+      "class_weight": null
+    },
+    "gaussian_nb": {
+      "var_smoothing": 0.1,
+      "priors": null
+    },
+    "random_forest": {
+      "n_estimators": 200,
+      "max_depth": 8,
+      "min_samples_leaf": 10,
+      "max_features": "sqrt",
+      "class_weight": "balanced"
+    },
+    "gradient_boosting": {
+      "max_iter": 150,
+      "learning_rate": 0.1,
+      "max_leaf_nodes": 7,
+      "l2_regularization": 0.0,
+      "class_weight": null
+    },
+    "decision_tree": {
+      "max_depth": 3,
+      "min_samples_leaf": 5,
+      "class_weight": null
+    }
+  },
+  "class_weights": "none or balanced=N/(3*n_class), derived only from train labels",
+  "nb_balanced": "Pipeline model__sample_weight; no native class_weight; scaler remains train-fitted and unweighted",
+  "dummy_balanced": "Not applicable: majority/prior reference depends on observed train distribution",
+  "selection": "Fixed inherited recipes; not re-tuned on the feature-branch split; no test-driven selection",
+  "progress_fix": "Removed true progress from all model inputs; explicit 27-column contract, no probability fusion",
+  "caveats": [
+    "Retrospective percentage sampling still uses final length; final positions included",
+    "Multiple snapshots of same game correlated; report per checkpoint as well as pooled",
+    "Previously viewed historical test and inherited recipes: exploratory, not a fresh blind test"
+  ],
+  "model_seed": 42,
+  "split_seed": 6001,
+  "python": "3.12.15",
+  "sklearn": "1.8.0",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "source_sha256": {
+    "src/progressive_baselines.py": "63ad51686e17d01531855ea6df68f11d41ad2ad8ca833455b8b5fe3ead6c8348",
+    "src/progressive_features.py": "f31a019314344800357e54fac2bb8aa4fe325482ccac81c51fb7e19313146a1c",
+    "src/baseline_models20.py": "08044ade4c8c2ae774a57d540a62b833f9e91c3bb18a952b35c783c156938651",
+    "src/plan_a20_interface.py": "55c6f5731609dc1ad18dad470c50175f2d6cda50dad98b90876d4d45f1b181bb",
+    "src/model_interface.py": "0e9e0ae3135be202f90d0b637e6b7694503120b42289e210f28b41bfb5ce42da",
+    "src/chess_data.py": "5a0ff1fd8ffbf2dbf964f2ae087e77179cc7c5d96ddc2968a542fafa33224767",
+    "run_progressive_baselines.py": "68434a575c05fe0a6555bbe33d8ed506667cdf939b531d7289f4b1d1c78a100d",
+    "verify_progressive_baselines.py": "67d17edb730c9c28695492fe9c08476cb44190a6121aa3a3bdf947b5090034b9",
+    "requirements.txt": "778bc67174ab4b748b624445605f1f6723da1a0af6f44730378aad11f67b1943",
+    "modelling_baselines/run_20261025_20ply_01/artifacts/frozen_config.json": "4298a1c8c00227f8f3d91db1abe3712bc0da5b0e7a2f75021d86ad4260494f4a",
+    "modelling_baselines/run_20261025_tree_01/artifacts/frozen_config.json": "3f6a158b44df315b445474f59f993d87bfe443fdb8aa48e8bec1a9ed497939eb",
+    "artifacts/progressive/data_manifest.json": "80e26166a8053accac5e2b6c0245efe0c501195c6db9522588ed2f5690ff01b6",
+    "artifacts/progressive/feature_contract.json": "75a98ed2eb02ec395b05a0427a22270f867f2d0d29a08e3b2f7a1d34a6f60bb7",
+    "data/progressive/snapshots.csv.gz": "5f32bebe456c7efe83e6f8f9e8ac76dbb2e897ba4583dea2d49e1a843b9962c7"
+  }
+}
