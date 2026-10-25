@@ -1,0 +1,11 @@
+{
+  "comparison": "combined minus pregame, same RF hyperparameters and same test IDs",
+  "deltas": {
+    "accuracy": 0.05692007797270948,
+    "macro_f1": 0.031836311114558424,
+    "balanced_accuracy": 0.031011076096639834,
+    "draw_recall": -0.030303030303030297,
+    "log_loss": -0.02650284072562914
+  },
+  "interpretation": "Descriptive differences only; no significance claim; repeated players create dependent samples"
+}

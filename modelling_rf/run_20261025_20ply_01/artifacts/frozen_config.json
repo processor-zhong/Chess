@@ -1,0 +1,45 @@
+{
+  "frozen_utc": "2026-10-25T08:19:40.722816+00:00",
+  "candidate": 7,
+  "parameters": {
+    "n_estimators": 200,
+    "max_depth": 16,
+    "min_samples_leaf": 10,
+    "max_features": "sqrt",
+    "class_weight": "balanced",
+    "n_jobs": 4
+  },
+  "preferred_feature_set_by_validation": "combined",
+  "final_fit_policy": "Refit both fixed configurations on train+validation; fit all preprocessing again",
+  "prediction_rule": "Argmax class probability; no probability threshold tuning",
+  "development_hashes": {
+    "artifacts/plan_a20/feature_contract.json": "8addffd8e0f41273932205af4c8bca3d02a7f757c9e3eab026b2464cd7bc5068",
+    "data/splits/split_manifest.csv": "5e9f92d2dde86c1a86ec1a6c40572573d321ee4a16a2670ebe1f36613fb9df53",
+    "data/plan_a20/splits/X_train.csv": "0df2105cc6337d9a0f94f7877512b369aed5ec9d2772b1f3dfe4a289da87295d",
+    "data/plan_a20/splits/y_train.csv": "c900cb7c5e2c5bec1cb37cc5e04ea6097e79a80f4d913dc3b68f0ee23af345ec",
+    "data/plan_a20/splits/meta_train.csv": "6336d52b4737a2ddab881f825be058320e0edf8750f7d6ab19e89870f1cebb82",
+    "data/plan_a20/splits/X_validation.csv": "6f5ded90c8d044e1cf8833fc17e600c491fdf270406ec369b67243d057fb0442",
+    "data/plan_a20/splits/y_validation.csv": "2c621d363b59f4b1d838f5d60f1fd038bdfedc64adf70f1100e1a4cfea75052a",
+    "data/plan_a20/splits/meta_validation.csv": "86335cd5b292ba7e1f5c63a5c703cce5ca6e1c6b048b44ffc00e2a375a2717be"
+  },
+  "protocol_sha256": "0ff4d348e22aa0fd92e6e336158ee7e852fff8897426afc21c5afa0fce2f16bc",
+  "selection_table": [
+    {
+      "feature_set": "pregame",
+      "accuracy": 0.5574735190270694,
+      "macro_f1": 0.42511329701729855,
+      "balanced_accuracy": 0.43015873015873013,
+      "draw_recall": 0.13333333333333333,
+      "log_loss": 0.9056596654119039
+    },
+    {
+      "feature_set": "combined",
+      "accuracy": 0.613966261278933,
+      "macro_f1": 0.4466501396170545,
+      "balanced_accuracy": 0.4451637152035956,
+      "draw_recall": 0.05,
+      "log_loss": 0.8777958847805952
+    }
+  ],
+  "test_seen_during_selection": false
+}

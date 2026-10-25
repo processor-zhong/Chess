@@ -1,0 +1,22 @@
+{
+  "method": "whole UTC days, target 70/15/15, 24h gap before each later block",
+  "validation_start_utc": "2017-08-10T00:00:00+00:00",
+  "test_start_utc": "2017-08-29T00:00:00+00:00",
+  "gap_hours": 24,
+  "boundary_selection_uses": "created_at only; never outcomes",
+  "clean_rows_before_gap": 19111,
+  "nominal_counts": {
+    "train": 13342,
+    "validation": 3044,
+    "test": 2725
+  },
+  "final_counts": {
+    "train": 13229,
+    "validation": 2747,
+    "test": 2725,
+    "excluded": 410
+  },
+  "exclusion_counts": {
+    "24h_boundary_gap": 410
+  }
+}

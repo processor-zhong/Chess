@@ -1,0 +1,47 @@
+feature,group,definition_zh,unit,constant_on_train,uses_future_moves
+rating_diff,pregame,白方等级分减黑方等级分,rating points,False,False
+avg_rating,pregame,双方等级分平均值,rating points,False,False
+abs_rating_diff,pregame,双方等级分差绝对值,rating points,False,False
+base_time_min,pregame,基础时间,minutes,False,False
+increment_seconds,pregame,每步增加的秒数,seconds,False,False
+rated,pregame,是否为计等级分对局，0/1,binary,False,False
+white_pawn_count,opening_ply20,白方：兵数量,count,False,False
+white_knight_count,opening_ply20,白方：马数量,count,False,False
+white_bishop_count,opening_ply20,白方：象数量,count,False,False
+white_rook_count,opening_ply20,白方：车数量,count,False,False
+white_queen_count,opening_ply20,白方：后数量,count,False,False
+white_piece_count,opening_ply20,白方：含王的全部棋子数量,count,False,False
+white_material,opening_ply20,白方：子力和：兵1马象3车5后9，不计王,pawn units,False,False
+white_minor_off_home_rank,opening_ply20,白方：当前位于己方底线以外的马象数；发展代理量，不追踪棋子个体,count,False,False
+white_center_occupancy,opening_ply20,白方：占据中心 d4/e4/d5/e5 的棋子数,count,False,False
+white_center_attacked_squares,opening_ply20,白方：攻击或防守到的中心格数，含被己方占据的格,count,False,False
+white_attacked_squares,opening_ply20,白方：攻击或防守到的不同棋盘格数；不等于合法着法数,count,False,False
+white_pawn_advancement,opening_ply20,白方：各兵相对初始兵线前进格数的总和，已被吃的兵不计,squares,False,False
+white_castled,opening_ply20,白方：前20个半回合内是否实际易位,binary,False,False
+white_kingside_right,opening_ply20,白方：截断局面是否仍具有王翼易位权,binary,False,False
+white_queenside_right,opening_ply20,白方：截断局面是否仍具有后翼易位权,binary,False,False
+white_king_file,opening_ply20,白方：王所在列，a=0至h=7,index,False,False
+white_king_rank,opening_ply20,白方：王所在行，第1行=0至第8行=7,index,False,False
+white_captures_first20,opening_ply20,白方：前20个半回合该方吃子次数，含吃过路兵,count,False,False
+white_checks_given_first20,opening_ply20,白方：前20个半回合该方走棋后将军次数,count,False,False
+black_pawn_count,opening_ply20,黑方：兵数量,count,False,False
+black_knight_count,opening_ply20,黑方：马数量,count,False,False
+black_bishop_count,opening_ply20,黑方：象数量,count,False,False
+black_rook_count,opening_ply20,黑方：车数量,count,False,False
+black_queen_count,opening_ply20,黑方：后数量,count,False,False
+black_piece_count,opening_ply20,黑方：含王的全部棋子数量,count,False,False
+black_material,opening_ply20,黑方：子力和：兵1马象3车5后9，不计王,pawn units,False,False
+black_minor_off_home_rank,opening_ply20,黑方：当前位于己方底线以外的马象数；发展代理量，不追踪棋子个体,count,False,False
+black_center_occupancy,opening_ply20,黑方：占据中心 d4/e4/d5/e5 的棋子数,count,False,False
+black_center_attacked_squares,opening_ply20,黑方：攻击或防守到的中心格数，含被己方占据的格,count,False,False
+black_attacked_squares,opening_ply20,黑方：攻击或防守到的不同棋盘格数；不等于合法着法数,count,False,False
+black_pawn_advancement,opening_ply20,黑方：各兵相对初始兵线前进格数的总和，已被吃的兵不计,squares,False,False
+black_castled,opening_ply20,黑方：前20个半回合内是否实际易位,binary,False,False
+black_kingside_right,opening_ply20,黑方：截断局面是否仍具有王翼易位权,binary,False,False
+black_queenside_right,opening_ply20,黑方：截断局面是否仍具有后翼易位权,binary,False,False
+black_king_file,opening_ply20,黑方：王所在列，a=0至h=7,index,False,False
+black_king_rank,opening_ply20,黑方：王所在行，第1行=0至第8行=7,index,False,False
+black_captures_first20,opening_ply20,黑方：前20个半回合该方吃子次数，含吃过路兵,count,False,False
+black_checks_given_first20,opening_ply20,黑方：前20个半回合该方走棋后将军次数,count,False,False
+material_diff,opening_ply20,白方子力和减黑方子力和；兵1马象3车5后9,pawn units,False,False
+side_to_move_in_check,opening_ply20,第20个半回合后轮到白方，白方是否被将军,binary,False,False

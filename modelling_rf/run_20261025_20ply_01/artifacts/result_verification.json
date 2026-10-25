@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "check_count": 25,
+  "checks": [
+    "Frozen config unchanged after final scoring",
+    "Configuration frozen before test access",
+    "Prediction IDs aligned: pregame",
+    "Actual outcomes aligned: pregame",
+    "Unique test predictions: pregame",
+    "Valid class probabilities: pregame",
+    "Argmax prediction matches frozen rule: pregame",
+    "Accuracy agrees with saved predictions: pregame",
+    "Macro-F1 agrees with predictions: pregame",
+    "Log Loss agrees with probabilities: pregame",
+    "Confusion matrix agrees: pregame",
+    "Final model has frozen settings: pregame",
+    "Final preprocessing fitted to train+validation: pregame",
+    "Prediction IDs aligned: combined",
+    "Actual outcomes aligned: combined",
+    "Unique test predictions: combined",
+    "Valid class probabilities: combined",
+    "Argmax prediction matches frozen rule: combined",
+    "Accuracy agrees with saved predictions: combined",
+    "Macro-F1 agrees with predictions: combined",
+    "Log Loss agrees with probabilities: combined",
+    "Confusion matrix agrees: combined",
+    "Final model has frozen settings: combined",
+    "Final preprocessing fitted to train+validation: combined",
+    "Both information sets use identical test games"
+  ],
+  "method": "Recomputed metrics from saved frozen predictions; no new model selection or holdout prediction pass"
+}

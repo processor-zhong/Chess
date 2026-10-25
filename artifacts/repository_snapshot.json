@@ -1,0 +1,467 @@
+[
+  {
+    "path": ".gitattributes",
+    "bytes": 60,
+    "sha256": "44ef593d9e269549389f55812d45ab176a67c697d4cec3c6d16c52efcda200c1"
+  },
+  {
+    "path": ".gitignore",
+    "bytes": 269,
+    "sha256": "1bb5562b95c5dee391266613b42dba3b37cf39fc06958a333254f4ed6e9a5685"
+  },
+  {
+    "path": "Modelling_Evaluation.ipynb",
+    "bytes": 14694,
+    "sha256": "5816802633fe2ec45d27d0ed33e0394ba135849db0da592995bad259c30b1b8c"
+  },
+  {
+    "path": "README.md",
+    "bytes": 4983,
+    "sha256": "5f1b530b0739db30e87684dd7cc85287e0650f5eeff0b980a27ea3e7516308c7"
+  },
+  {
+    "path": "artifacts/plan_a20/feature_contract.json",
+    "bytes": 3503,
+    "sha256": "8addffd8e0f41273932205af4c8bca3d02a7f757c9e3eab026b2464cd7bc5068"
+  },
+  {
+    "path": "artifacts/plan_a20/output_hashes.json",
+    "bytes": 2569,
+    "sha256": "3dd1133d15553aacf4f9bd0add790fe721932e2897cf425efad4fb656efe9736"
+  },
+  {
+    "path": "artifacts/plan_a20/processing_audit.json",
+    "bytes": 1127,
+    "sha256": "9b745d29160b1c014e6575887e844893b65bf46502093d9bd2c9683968ac1e63"
+  },
+  {
+    "path": "artifacts/plan_a20/validation_checks.json",
+    "bytes": 5089,
+    "sha256": "8027a9f23c5915593b39c397d414daf4b714816a2a7006a3a0e536f822c91bca"
+  },
+  {
+    "path": "artifacts/upstream/data_audit.json",
+    "bytes": 1162,
+    "sha256": "45df4f0390d5b665eaf59010e9360cc8af4db167f6b82bc7296d18b12377238d"
+  },
+  {
+    "path": "artifacts/upstream/environment.json",
+    "bytes": 193,
+    "sha256": "f5b0962913fe4cc7bc42735638e016223275c105e5dda129e593103a695c07a0"
+  },
+  {
+    "path": "artifacts/upstream/split_protocol.json",
+    "bytes": 555,
+    "sha256": "77a036ad72f5847738ff32225d3e626fcca86ad3e5fd780c6526310a0abb557f"
+  },
+  {
+    "path": "data/plan_a20/holdout/X_test.csv",
+    "bytes": 302274,
+    "sha256": "e4ac58e61b3281c83f66a5a1c14d182e4152c3872e42098d95c9b8fb06e098bb"
+  },
+  {
+    "path": "data/plan_a20/holdout/X_test_pregame.csv",
+    "bytes": 80125,
+    "sha256": "9b513c8394360884e49b12666c7da56a0d5e4c9eec1661846ba568e2ca357c86"
+  },
+  {
+    "path": "data/plan_a20/holdout/meta_test.csv",
+    "bytes": 485573,
+    "sha256": "46e9474a21a0b9ecc0fcf8deb32c8681109bccbf04e5962f5620539ffd090d86"
+  },
+  {
+    "path": "data/plan_a20/holdout/y_test.csv",
+    "bytes": 15265,
+    "sha256": "413788f4b61642e89d2d5aef3c929e869a41062087dff0522d29640452c66670"
+  },
+  {
+    "path": "data/plan_a20/splits/X_train.csv",
+    "bytes": 1406919,
+    "sha256": "0df2105cc6337d9a0f94f7877512b369aed5ec9d2772b1f3dfe4a289da87295d"
+  },
+  {
+    "path": "data/plan_a20/splits/X_train_pregame.csv",
+    "bytes": 375798,
+    "sha256": "fad7dca7f2812f9ed5ccfd8032d1e466651d7f5539e74362d7b765769942078b"
+  },
+  {
+    "path": "data/plan_a20/splits/X_validation.csv",
+    "bytes": 300759,
+    "sha256": "6f5ded90c8d044e1cf8833fc17e600c491fdf270406ec369b67243d057fb0442"
+  },
+  {
+    "path": "data/plan_a20/splits/X_validation_pregame.csv",
+    "bytes": 79975,
+    "sha256": "519be08ae2f19c34acc5e8170cdef800b1f5376b467759b116b61779f3af7ad6"
+  },
+  {
+    "path": "data/plan_a20/splits/meta_train.csv",
+    "bytes": 2216799,
+    "sha256": "6336d52b4737a2ddab881f825be058320e0edf8750f7d6ab19e89870f1cebb82"
+  },
+  {
+    "path": "data/plan_a20/splits/meta_validation.csv",
+    "bytes": 476396,
+    "sha256": "86335cd5b292ba7e1f5c63a5c703cce5ca6e1c6b048b44ffc00e2a375a2717be"
+  },
+  {
+    "path": "data/plan_a20/splits/y_train.csv",
+    "bytes": 71093,
+    "sha256": "c900cb7c5e2c5bec1cb37cc5e04ea6097e79a80f4d913dc3b68f0ee23af345ec"
+  },
+  {
+    "path": "data/plan_a20/splits/y_validation.csv",
+    "bytes": 15181,
+    "sha256": "2c621d363b59f4b1d838f5d60f1fd038bdfedc64adf70f1100e1a4cfea75052a"
+  },
+  {
+    "path": "data/processed/clean_games_for_audit.csv",
+    "bytes": 9516459,
+    "sha256": "539d305f580f177eb893bf3ec13c607469103532805c2d94fff6d98961d88d25"
+  },
+  {
+    "path": "data/raw/SOURCE.md",
+    "bytes": 1418,
+    "sha256": "61c2d0439083f5c41cf1cb6210992af52f341af3d42b20a20b7dd9b7b1c17b00"
+  },
+  {
+    "path": "data/raw/games.csv",
+    "bytes": 7672655,
+    "sha256": "e7aadff104a610afb5403caf81c1461babecb0dc87760ff5eea7dc0e7a4a8129"
+  },
+  {
+    "path": "data/raw/provenance.json",
+    "bytes": 924,
+    "sha256": "439c0992578b9e669638438514be81bd7381cb548608abd5d51a4af2a5391795"
+  },
+  {
+    "path": "data/splits/split_manifest.csv",
+    "bytes": 3167533,
+    "sha256": "5e9f92d2dde86c1a86ec1a6c40572573d321ee4a16a2670ebe1f36613fb9df53"
+  },
+  {
+    "path": "docs/DATA_PROTOCOL.md",
+    "bytes": 2315,
+    "sha256": "c589fac9134b57e974f425186d58edbd50cf3214845a092ea8337685f6ff9dfd"
+  },
+  {
+    "path": "docs/HANDOVER_ZH.md",
+    "bytes": 3123,
+    "sha256": "cf34419dd2e24167f3049867df811f53386b6e14b9c1e8268dbfb5e149bd5984"
+  },
+  {
+    "path": "docs/MODELLING_EVALUATION.md",
+    "bytes": 2038,
+    "sha256": "eccb1e874b922a5f1cb2fcab77d094675653204ea0a5cb93b3d8da2346856105"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/RESULTS_20ply_简要说明.md",
+    "bytes": 3320,
+    "sha256": "2bd5e9c02f12b9a6b3c91c358fcfd0ac041d85c1c924702de143a020f52bb99e"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/artifacts/development_complete.json",
+    "bytes": 210,
+    "sha256": "68ffa483c7cb078d627650876d4e126693b5a072e80c0ab3d74fbc52e7d6630d"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/artifacts/feature_effect.json",
+    "bytes": 425,
+    "sha256": "abc895d4ab7229b17ce6f50cdb05a2b7b03e6b647c1a75e9ead804da47afcb85"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/artifacts/final_evaluation_complete.json",
+    "bytes": 1430,
+    "sha256": "d2231ce4f00abd03b2cf1928a0a56112b3154e654ce6ed5ddb07eec5be8c73e2"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/artifacts/frozen_config.json",
+    "bytes": 2043,
+    "sha256": "962c49d7a4fe73ad664c83885cbde3cf30341102a8ca3f5befc556a5d9b82d2a"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/artifacts/protocol.json",
+    "bytes": 4540,
+    "sha256": "0ff4d348e22aa0fd92e6e336158ee7e852fff8897426afc21c5afa0fce2f16bc"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/artifacts/result_verification.json",
+    "bytes": 1383,
+    "sha256": "e930166c858a8b1eb1bade43cf54e55a8e99e3d1ec3a0c6f2e630c3762070c7f"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/artifacts/test_access.json",
+    "bytes": 247,
+    "sha256": "3dc1573bb5a0c0867e1e7372a1ec4f704fb7519c0937a0db32fdff870616aa48"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/figures/test_confusion_combined.png",
+    "bytes": 72511,
+    "sha256": "72f27f0456935e190383796155598c86c7bf3ca0b2a709c169cd51a45a09933c"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/figures/test_confusion_pregame.png",
+    "bytes": 73439,
+    "sha256": "139651f7c7ffef4970d42fed458c79c39cfcc388dcee80d884acf3ac8e5315ab"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/figures/test_feature_comparison.png",
+    "bytes": 52556,
+    "sha256": "17a8b1683b9f82eda0dc0032fc2d5ecdd7771acb1e9dd50d88c686ebd172c0b3"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/figures/validation_feature_importance.png",
+    "bytes": 97796,
+    "sha256": "0595d3cc06ff706d475c9e96a104feafe8e0a9167db0a088497038c43076d01d"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/models/rf_combined_final.joblib",
+    "bytes": 20102746,
+    "sha256": "8c750edab7a49ad13604cf5a1425733f93e665abade8fb8f2eabf816be4f2b27"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/models/rf_combined_train_only.joblib",
+    "bytes": 16894266,
+    "sha256": "e7a92cd5d856cc64a955c630b4bb273bbd28bf4d0d5a2550a87b8bf48c50e5e3"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/models/rf_pregame_final.joblib",
+    "bytes": 18542746,
+    "sha256": "80a13b7cd908362323ab33135a1026ca5226a7505120dd824f243f6f43fc56e9"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/models/rf_pregame_train_only.joblib",
+    "bytes": 16094586,
+    "sha256": "3ee1d2055ca41cfb6e850c1914e44e3a36d87db0c616993e976313b5e54896be"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/checkpoint_common_cohort_metrics.csv",
+    "bytes": 460,
+    "sha256": "bc725f53af4f3ac910c09cbb8b5252029548c25f51fbf4790bc04871300b54e9"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/cv_fold_metrics.csv",
+    "bytes": 8649,
+    "sha256": "ea1722bda68c14ae01a53b5f796bd14a20421778966995b72aebf83a2666d875"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/cv_folds.csv",
+    "bytes": 68,
+    "sha256": "6b1e69bccfa6532e1c28692f39e6fe4e00516fdbaf0baa962b7cc38969b098e3"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/cv_summary.csv",
+    "bytes": 4700,
+    "sha256": "37a0671cb0cc3d85d8b0a7548fa845990d4d30a0040353aae2ef8bb98178897c"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/test_combined_confusion.csv",
+    "bytes": 71,
+    "sha256": "9ab7f0b92467f05dffeed6ec8ba606fca72390ed14b1a853f69643991326799d"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/test_combined_per_class.csv",
+    "bytes": 478,
+    "sha256": "a14deca65f992ba6c204de62fb30460bee2e9fa2b537143caa13587848d08d8a"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/test_combined_predictions.csv",
+    "bytes": 283396,
+    "sha256": "b6b83603077691f8eeec22ab6f6e4e710b8953313cedc708ebe2aa1fa8c9b1a7"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/test_metrics.csv",
+    "bytes": 376,
+    "sha256": "bc3e9f34af784d3488e71cc49b6f1aeeb56736c1f09c1ec61ce8cc702d721954"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/test_pregame_confusion.csv",
+    "bytes": 72,
+    "sha256": "1f401a500bb75a6dfe85b5e261fad54f1a9e0f60ee564429b861bd523ce8c8ae"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/test_pregame_per_class.csv",
+    "bytes": 482,
+    "sha256": "b4da1543ae28f50fb6339352e5032bf07fd7543b542eb0f29f8d9775b1bfc57c"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/test_pregame_predictions.csv",
+    "bytes": 283332,
+    "sha256": "b08d260941026e9e35b85683f02bd075165cdfad545d52f15b22088a8a4baf75"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/test_subgroup_metrics.csv",
+    "bytes": 1170,
+    "sha256": "f8366bd5a7dd3c2f384847381020e8c2646ff6c75f4dbd4ede6c53646786d12b"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/validation_combined_confusion.csv",
+    "bytes": 71,
+    "sha256": "01c57a3616058711b085045b30048739608e20debb3d37c0d59a7e30d7add833"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/validation_combined_per_class.csv",
+    "bytes": 461,
+    "sha256": "e62d4bd346da52ca09c57f151f872ff4a9f212d5e6f07e1f084714f9fc588e74"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/validation_combined_predictions.csv",
+    "bytes": 278529,
+    "sha256": "2f3aa70aace4b068e58a92d65e17afd16aa39e5ebcf7c12a09c2b8b5a918c2b3"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/validation_permutation_importance.csv",
+    "bytes": 2932,
+    "sha256": "eac2555be7e9c13c333e03cc8e713bcae91115830d174331581b9442880363eb"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/validation_pregame_confusion.csv",
+    "bytes": 73,
+    "sha256": "37183eb5f6ad2d654f4b64ee44e05bd3327d1c5ae89b2cd53408da8be7f9ef28"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/validation_pregame_per_class.csv",
+    "bytes": 484,
+    "sha256": "d191e57179957363802309639c8c83beb256e6171e9ae535c5559e7e5c406fbd"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/validation_pregame_predictions.csv",
+    "bytes": 278508,
+    "sha256": "ba29bbd9c50556cb0200425d19c3fb52f1eaee4b74f0effd684ee8271b6eac04"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/validation_selected_metrics.csv",
+    "bytes": 264,
+    "sha256": "79fd7bb42c577cfd67793f759c091063e467c7380183393bc3e161c24f88b2fa"
+  },
+  {
+    "path": "modelling_rf/run_20261025_20ply_01/tables/validation_shortlist.csv",
+    "bytes": 1076,
+    "sha256": "aa993452d1574112e10cdf60c8723fc6daa5029e825bf2aab6c6c61d2cac45f4"
+  },
+  {
+    "path": "predict_opening.py",
+    "bytes": 1832,
+    "sha256": "b6421a0dc10f061c9c3025cf5c219efd5550c5fee1909d8ef7735cb2a2c02e8b"
+  },
+  {
+    "path": "rebuild_data.py",
+    "bytes": 1176,
+    "sha256": "5f9b301e1dfc5c9b1eb876382a128a929d9ff0383bf3c95756ed0e250783683a"
+  },
+  {
+    "path": "requirements-notebook.txt",
+    "bytes": 86,
+    "sha256": "b65216607b0d9b8608657f23ab675566335ed2ba735f93b157a061b84b28253e"
+  },
+  {
+    "path": "requirements-plan-a.txt",
+    "bytes": 67,
+    "sha256": "bfe3dde04297fdb66c1d05ef7b5f56fee3a9af1c168cd5cec8039e55e14798b0"
+  },
+  {
+    "path": "requirements.txt",
+    "bytes": 182,
+    "sha256": "778bc67174ab4b748b624445605f1f6723da1a0af6f44730378aad11f67b1943"
+  },
+  {
+    "path": "run_plan_a20.py",
+    "bytes": 209,
+    "sha256": "d61a024da57bfb36236f0082aeca1449e4d5bb63f64e4fa6c050243b9f5711cb"
+  },
+  {
+    "path": "run_rf_modelling20.py",
+    "bytes": 132,
+    "sha256": "ad683ed73be217af2889d9383063f3e475430cfc5db1a5356e84614bc4ae8918"
+  },
+  {
+    "path": "src/__init__.py",
+    "bytes": 65,
+    "sha256": "0d5ed6f091a27c99dd6e138bf4581d1b3ea4ef99081c91c0c69e676d619348ca"
+  },
+  {
+    "path": "src/chess_data.py",
+    "bytes": 15355,
+    "sha256": "5a0ff1fd8ffbf2dbf964f2ae087e77179cc7c5d96ddc2968a542fafa33224767"
+  },
+  {
+    "path": "src/model_interface.py",
+    "bytes": 4675,
+    "sha256": "0e9e0ae3135be202f90d0b637e6b7694503120b42289e210f28b41bfb5ce42da"
+  },
+  {
+    "path": "src/plan_a20_data.py",
+    "bytes": 10606,
+    "sha256": "9fa2c97023c9d4e4463ae144f587e4c386e1d413ae8e5771d8095b0843de6ca6"
+  },
+  {
+    "path": "src/plan_a20_feature_dictionary.py",
+    "bytes": 2752,
+    "sha256": "4379fda5e4b4ba22b6a553ee1187c1ede0f1fc1375e02ff16449211696c9b96b"
+  },
+  {
+    "path": "src/plan_a20_interface.py",
+    "bytes": 3266,
+    "sha256": "55c6f5731609dc1ad18dad470c50175f2d6cda50dad98b90876d4d45f1b181bb"
+  },
+  {
+    "path": "src/rf_experiment20.py",
+    "bytes": 15923,
+    "sha256": "205ddd8eea66e66ee86c56d8722487a47aaf572951951c358aa37d916bad25fb"
+  },
+  {
+    "path": "tables/plan_a20/feature_dictionary.csv",
+    "bytes": 4563,
+    "sha256": "7fc0c3a5d4bc403e34e289192ad6a9fe9de812c380217b8706b80a4f5f955598"
+  },
+  {
+    "path": "tables/plan_a20/processing_summary.csv",
+    "bytes": 218,
+    "sha256": "5330e1dd371906ab85e85b41e19c2f64433bf13375483ee4228191cdc9dd92a7"
+  },
+  {
+    "path": "tables/plan_a20/row_decisions.csv",
+    "bytes": 510237,
+    "sha256": "dc15479de8f93552ad90e28c121b013c24b184787f6c6c06fc3b8eed60d5246c"
+  },
+  {
+    "path": "tables/plan_a20/split_summary.csv",
+    "bytes": 317,
+    "sha256": "9943b6e8821bf306fb48b6437b4d2c2b00b98334c8a9b6fb67ea1e9e2284b2f1"
+  },
+  {
+    "path": "tables/plan_a20/train_class_balance.csv",
+    "bytes": 43,
+    "sha256": "13d01ebba0d846013749a68a2010f373595dbebeaafe53000692e6852ee56c49"
+  },
+  {
+    "path": "tables/plan_a20/train_feature_summary.csv",
+    "bytes": 4009,
+    "sha256": "6fd6cc0a328f8f0e885b9763036eaa2da214408dc029710d9a89144213bb9fb8"
+  },
+  {
+    "path": "tables/upstream/duplicate_id_audit.csv",
+    "bytes": 53799,
+    "sha256": "7b5d292904a50b287d55e87c12499748782292e00dd7aee1101d8794bb62a55a"
+  },
+  {
+    "path": "tables/upstream/player_overlap_audit.csv",
+    "bytes": 282,
+    "sha256": "ac434ef84e3af823d11e7583ac7dee9e6abc6f06d6dff39b3317016402e3231e"
+  },
+  {
+    "path": "tables/upstream/row_decisions.csv",
+    "bytes": 481679,
+    "sha256": "920d8f7a7998b71de8f2942a3d99eb33b30cdb68b3efa1376d144f0d60c885cd"
+  },
+  {
+    "path": "validate_plan_a20.py",
+    "bytes": 7803,
+    "sha256": "b258b76f68f95c47c9040f34753779ba0835a0a2f98a06af70a2f72d13c179a7"
+  },
+  {
+    "path": "verify_snapshot.py",
+    "bytes": 3065,
+    "sha256": "b33d7697f270575a2d6536330febe58a1975019f2a30b6bdfa07d898bcbcb9b2"
+  }
+]

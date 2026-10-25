@@ -1,0 +1,2 @@
+# Compatibility alias; prefer requirements.txt
+-r requirements.txt

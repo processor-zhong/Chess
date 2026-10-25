@@ -1,0 +1,8 @@
+original_split,decision,rows
+excluded,original_boundary_gap,410
+test,finished_by_ply20,160
+test,retained,2565
+train,finished_by_ply20,1293
+train,retained,11936
+validation,finished_by_ply20,198
+validation,retained,2549
