@@ -1,0 +1,133 @@
+{
+  "created_utc": "2026-10-25T14:01:41.833792+00:00",
+  "algorithm": "DecisionTreeClassifier",
+  "prediction_ply": 20,
+  "labels": [
+    "black",
+    "draw",
+    "white"
+  ],
+  "seed": 42,
+  "initial": "sklearn defaults except random_state=42",
+  "grid": [
+    {
+      "max_depth": 3,
+      "min_samples_leaf": 5,
+      "class_weight": null
+    },
+    {
+      "max_depth": 3,
+      "min_samples_leaf": 5,
+      "class_weight": "balanced"
+    },
+    {
+      "max_depth": 3,
+      "min_samples_leaf": 20,
+      "class_weight": null
+    },
+    {
+      "max_depth": 3,
+      "min_samples_leaf": 20,
+      "class_weight": "balanced"
+    },
+    {
+      "max_depth": 5,
+      "min_samples_leaf": 5,
+      "class_weight": null
+    },
+    {
+      "max_depth": 5,
+      "min_samples_leaf": 5,
+      "class_weight": "balanced"
+    },
+    {
+      "max_depth": 5,
+      "min_samples_leaf": 20,
+      "class_weight": null
+    },
+    {
+      "max_depth": 5,
+      "min_samples_leaf": 20,
+      "class_weight": "balanced"
+    },
+    {
+      "max_depth": 8,
+      "min_samples_leaf": 5,
+      "class_weight": null
+    },
+    {
+      "max_depth": 8,
+      "min_samples_leaf": 5,
+      "class_weight": "balanced"
+    },
+    {
+      "max_depth": 8,
+      "min_samples_leaf": 20,
+      "class_weight": null
+    },
+    {
+      "max_depth": 8,
+      "min_samples_leaf": 20,
+      "class_weight": "balanced"
+    },
+    {
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "class_weight": null
+    },
+    {
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "class_weight": "balanced"
+    },
+    {
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "class_weight": null
+    },
+    {
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "class_weight": "balanced"
+    },
+    {
+      "max_depth": null,
+      "min_samples_leaf": 5,
+      "class_weight": null
+    },
+    {
+      "max_depth": null,
+      "min_samples_leaf": 5,
+      "class_weight": "balanced"
+    },
+    {
+      "max_depth": null,
+      "min_samples_leaf": 20,
+      "class_weight": null
+    },
+    {
+      "max_depth": null,
+      "min_samples_leaf": 20,
+      "class_weight": "balanced"
+    }
+  ],
+  "selection": "Per feature set: mean training temporal CV Macro-F1, then lower CV Log Loss, then candidate ID. Frozen before validation labels loaded.",
+  "cv": "Three expanding chronological folds with whole UTC days and 24-hour gap; fresh Pipeline",
+  "preprocessing": "Fold-fitted median imputation and constant removal, no scaling",
+  "test_loaded": false,
+  "python": "3.12.15",
+  "sklearn": "1.8.0",
+  "source_sha256": {
+    "data/plan_a20/splits/X_train.csv": "0df2105cc6337d9a0f94f7877512b369aed5ec9d2772b1f3dfe4a289da87295d",
+    "data/plan_a20/splits/X_validation.csv": "6f5ded90c8d044e1cf8833fc17e600c491fdf270406ec369b67243d057fb0442",
+    "data/plan_a20/splits/y_train.csv": "c900cb7c5e2c5bec1cb37cc5e04ea6097e79a80f4d913dc3b68f0ee23af345ec",
+    "data/plan_a20/splits/y_validation.csv": "2c621d363b59f4b1d838f5d60f1fd038bdfedc64adf70f1100e1a4cfea75052a",
+    "data/plan_a20/splits/meta_train.csv": "6336d52b4737a2ddab881f825be058320e0edf8750f7d6ab19e89870f1cebb82",
+    "data/plan_a20/splits/meta_validation.csv": "86335cd5b292ba7e1f5c63a5c703cce5ca6e1c6b048b44ffc00e2a375a2717be",
+    "run_decision_tree20.py": "8d2658eb7d5bf4a30a8dc8fc6119496fad92902146c6b3c1fa1534da81e4318d",
+    "src/baseline_models20.py": "08044ade4c8c2ae774a57d540a62b833f9e91c3bb18a952b35c783c156938651",
+    "src/plan_a20_interface.py": "55c6f5731609dc1ad18dad470c50175f2d6cda50dad98b90876d4d45f1b181bb",
+    "src/model_interface.py": "0e9e0ae3135be202f90d0b637e6b7694503120b42289e210f28b41bfb5ce42da",
+    "artifacts/plan_a20/feature_contract.json": "8addffd8e0f41273932205af4c8bca3d02a7f757c9e3eab026b2464cd7bc5068"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "frozen_utc": "2026-10-25T13:18:34.295434+00:00",
+  "selected": [
+    {
+      "feature_set": "pregame",
+      "family": "logistic",
+      "candidate": 4,
+      "parameters": {
+        "C": 1.0,
+        "class_weight": null
+      }
+    },
+    {
+      "feature_set": "pregame",
+      "family": "gaussian_nb",
+      "candidate": 4,
+      "parameters": {
+        "var_smoothing": 0.001,
+        "priors": null
+      }
+    },
+    {
+      "feature_set": "pregame",
+      "family": "random_forest",
+      "candidate": 7,
+      "parameters": {
+        "n_estimators": 200,
+        "max_depth": 16,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      }
+    },
+    {
+      "feature_set": "pregame",
+      "family": "gradient_boosting",
+      "candidate": 2,
+      "parameters": {
+        "max_iter": 150,
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 7,
+        "l2_regularization": 10.0,
+        "class_weight": null
+      }
+    },
+    {
+      "feature_set": "combined",
+      "family": "logistic",
+      "candidate": 2,
+      "parameters": {
+        "C": 0.1,
+        "class_weight": null
+      }
+    },
+    {
+      "feature_set": "combined",
+      "family": "gaussian_nb",
+      "candidate": 6,
+      "parameters": {
+        "var_smoothing": 0.1,
+        "priors": null
+      }
+    },
+    {
+      "feature_set": "combined",
+      "family": "random_forest",
+      "candidate": 3,
+      "parameters": {
+        "n_estimators": 200,
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      }
+    },
+    {
+      "feature_set": "combined",
+      "family": "gradient_boosting",
+      "candidate": 0,
+      "parameters": {
+        "max_iter": 150,
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 7,
+        "l2_regularization": 0.0,
+        "class_weight": null
+      }
+    }
+  ],
+  "test_loaded": false,
+  "validation_labels_loaded_during_selection": false,
+  "protocol_sha256": "20f011b815bbafdfbc77dd14af5e906e6f2ec786f4735d55703dc02aefd89125"
+}

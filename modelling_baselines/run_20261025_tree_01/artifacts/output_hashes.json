@@ -1,0 +1,110 @@
+[
+  {
+    "path": "artifacts/development_complete.json",
+    "sha256": "d58dcb3941144838c52231ea6f6e4ac771617b61387aaac6049aead168f0a116"
+  },
+  {
+    "path": "artifacts/frozen_config.json",
+    "sha256": "3f6a158b44df315b445474f59f993d87bfe443fdb8aa48e8bec1a9ed497939eb"
+  },
+  {
+    "path": "artifacts/protocol.json",
+    "sha256": "af4a86cd405079797201d52cff21d62b44a5cc3f884f1b88fb27eca1316b0b7e"
+  },
+  {
+    "path": "artifacts/result_verification.json",
+    "sha256": "ee11ffca06146d6e836e9944d02079468daba904d07c7d702c87600ffcb14f61"
+  },
+  {
+    "path": "figures/confusion_matrices.png",
+    "sha256": "097a70c230c6ce3f328fca6aa9a39dcb7714050a3df43c7b05da9c50f920c6f7"
+  },
+  {
+    "path": "figures/training_validation_gap.png",
+    "sha256": "04af14cb4ac421b032d11127b5b7d76f156c3eeeaea9e462cdccfbd7d7222adc"
+  },
+  {
+    "path": "models/combined_initial.joblib",
+    "sha256": "d3172c36f58e64b8b7b551bb47231a3ad3042d4cc315a0e1c44413d5a73a56fe"
+  },
+  {
+    "path": "models/combined_tuned.joblib",
+    "sha256": "6c12a2bb8e1bb8ba2e9ebb4fb330f816aa90f3a665523cdfedecae3f89356ef5"
+  },
+  {
+    "path": "models/pregame_initial.joblib",
+    "sha256": "f5185d2c197ec0531f0971c139e9512d8aca04353d7e1dbd7bbff8e283f4b839"
+  },
+  {
+    "path": "models/pregame_tuned.joblib",
+    "sha256": "235bcf6ac879395e3d57b6816b317984b26be98e308fda8b25163256dbe31409"
+  },
+  {
+    "path": "RESULTS_ZH.md",
+    "sha256": "7c775ae5bdfb4c153b7d900233b3b8c054070931fad688c16872a0402b937cd7"
+  },
+  {
+    "path": "tables/combined_initial_confusion.csv",
+    "sha256": "14b0399347a73ca35ea5710bcbf5d3f81ac1b9acf53efbff0f51b726e298ca6d"
+  },
+  {
+    "path": "tables/combined_initial_predictions.csv",
+    "sha256": "025f39749b358eac738780fbef58066362933e7306a6d0a785b0551e645fb410"
+  },
+  {
+    "path": "tables/combined_initial_top_tree.txt",
+    "sha256": "93591eff89e31b88767ac7f4da83f6352b2c35c817748cef2033d317433e1d80"
+  },
+  {
+    "path": "tables/combined_tuned_confusion.csv",
+    "sha256": "332b9096f6175d13cf1c8b69f2dcfd953a4758466bfcd25fabe4d3b1315faeb4"
+  },
+  {
+    "path": "tables/combined_tuned_predictions.csv",
+    "sha256": "5a3ae215bb60970749d659b6c79e462bc8a745b962a358fc0c6cc59903ced016"
+  },
+  {
+    "path": "tables/combined_tuned_top_tree.txt",
+    "sha256": "1f74e24af0d1dec7bec63a88545b12d16a707a882f356eb710f52c4c7288764d"
+  },
+  {
+    "path": "tables/cv_fold_metrics.csv",
+    "sha256": "e6a8f427ef299626ca0603b929f6f11ecf52824df772ee09bcd0ccf37148def5"
+  },
+  {
+    "path": "tables/cv_summary.csv",
+    "sha256": "5f4e1da8c28efd68156ede33c019348894b2a944591e2eee390141d8d2e20117"
+  },
+  {
+    "path": "tables/pregame_initial_confusion.csv",
+    "sha256": "928e41246b3101b02957bd69284c4f908d325a1061f74354902e0cb4f59cf2fd"
+  },
+  {
+    "path": "tables/pregame_initial_predictions.csv",
+    "sha256": "b644c8c2b26ebda2106d2c053c0549b36b402c45c64833f11bae8cad5562b747"
+  },
+  {
+    "path": "tables/pregame_initial_top_tree.txt",
+    "sha256": "08ad5d03cb09aa63b07bc0dfe0d6769757318597dda812f7481d4eb5d9ecf6f4"
+  },
+  {
+    "path": "tables/pregame_tuned_confusion.csv",
+    "sha256": "bd19d0ad07660848c03e0373a9a5351f5d3a42556f499054deb4eead72fa7d83"
+  },
+  {
+    "path": "tables/pregame_tuned_predictions.csv",
+    "sha256": "af188898b7eb9f1a45a006d089272ab636f444d3f5a48a3a038e9fecf05cb564"
+  },
+  {
+    "path": "tables/pregame_tuned_top_tree.txt",
+    "sha256": "0334dba6edc92e68cd7d907ce4f67f98e917740586b0727eb4bd552353748f98"
+  },
+  {
+    "path": "tables/validation_metrics.csv",
+    "sha256": "009353709e60edf2e6b73722d70df2fc408d3aa5d33e01f15ef1317861dd7308"
+  },
+  {
+    "path": "tables/validation_per_class.csv",
+    "sha256": "9eb87b87ef37e1741302734a27804802c062ed95a95ce6103c8a63bcd1d7bdfc"
+  }
+]

@@ -12,6 +12,7 @@ matplotlib_cache/
 
 # New experiments stay local unless intentionally selected for sharing
 modelling_rf/local_*/
+modelling_baselines/local_*/
 work/
 *.log
 .env

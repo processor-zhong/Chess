@@ -15,15 +15,15 @@ def main():
         nonlocal count
         if not bool(ok):raise AssertionError(message)
         count+=1
-    raw=json.loads((root/'data/raw/provenance.json').read_text())
+    raw=json.loads((root/'data/raw/provenance.json').read_text(encoding='utf-8'))
     check(sha256(root/'data/raw/games.csv')==raw['sha256'],'Raw dataset hash')
-    for item in json.loads((root/'artifacts/plan_a20/output_hashes.json').read_text()):
+    for item in json.loads((root/'artifacts/plan_a20/output_hashes.json').read_text(encoding='utf-8')):
         check(sha256(root/item['path'])==item['sha256'],'Data artifact: '+item['path'])
-    frozen=json.loads((run/'artifacts/frozen_config.json').read_text())
-    final=json.loads((run/'artifacts/final_evaluation_complete.json').read_text())
+    frozen=json.loads((run/'artifacts/frozen_config.json').read_text(encoding='utf-8'))
+    final=json.loads((run/'artifacts/final_evaluation_complete.json').read_text(encoding='utf-8'))
     check(sha256(run/'artifacts/frozen_config.json')==final['frozen_config_sha256'],'Frozen configuration')
     check(sha256(run/'artifacts/protocol.json')==frozen['protocol_sha256'],'Protocol')
-    protocol=json.loads((run/'artifacts/protocol.json').read_text())
+    protocol=json.loads((run/'artifacts/protocol.json').read_text(encoding='utf-8'))
     check(sha256(root/'src/rf_experiment20.py')==protocol['source_code_sha256'],'Selected experiment source matches recorded version')
     for relative,h in frozen['development_hashes'].items():check(sha256(root/relative)==h,'Development source: '+relative)
     for relative,h in final['holdout_hashes'].items():check(sha256(root/relative)==h,'Holdout source: '+relative)
@@ -41,7 +41,7 @@ def main():
     # Inventory covers the handover snapshot; .git, runtime caches and this manifest excluded.
     inventory=root/'artifacts/repository_snapshot.json'
     if inventory.exists():
-        for item in json.loads(inventory.read_text()):check(sha256(root/item['path'])==item['sha256'],'Repository file: '+item['path'])
+        for item in json.loads(inventory.read_text(encoding='utf-8')):check(sha256(root/item['path'])==item['sha256'],'Repository file: '+item['path'])
     print(f'Passed {count} snapshot checks. No model refitting or new holdout predictions.')
 
 if __name__=='__main__':main()

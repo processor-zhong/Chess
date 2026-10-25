@@ -1,0 +1,26 @@
+{
+  "frozen_utc": "2026-10-25T14:01:51.046734+00:00",
+  "selected": [
+    {
+      "feature_set": "pregame",
+      "candidate": 0,
+      "parameters": {
+        "max_depth": 3,
+        "min_samples_leaf": 5,
+        "class_weight": null
+      }
+    },
+    {
+      "feature_set": "combined",
+      "candidate": 0,
+      "parameters": {
+        "max_depth": 3,
+        "min_samples_leaf": 5,
+        "class_weight": null
+      }
+    }
+  ],
+  "validation_labels_loaded": false,
+  "test_loaded": false,
+  "protocol_sha256": "af4a86cd405079797201d52cff21d62b44a5cc3f884f1b88fb27eca1316b0b7e"
+}

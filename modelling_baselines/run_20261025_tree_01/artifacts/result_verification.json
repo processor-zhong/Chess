@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "check_count": 19,
+  "checks": [
+    "pregame_initial: model reload reproduces validation predictions/probabilities",
+    "pregame_initial: confusion matches correct prediction count",
+    "pregame_tuned: model reload reproduces validation predictions/probabilities",
+    "pregame_tuned: confusion matches correct prediction count",
+    "combined_initial: model reload reproduces validation predictions/probabilities",
+    "combined_initial: confusion matches correct prediction count",
+    "combined_tuned: model reload reproduces validation predictions/probabilities",
+    "combined_tuned: confusion matches correct prediction count",
+    "Unchanged source: data/plan_a20/splits/X_train.csv",
+    "Unchanged source: data/plan_a20/splits/X_validation.csv",
+    "Unchanged source: data/plan_a20/splits/y_train.csv",
+    "Unchanged source: data/plan_a20/splits/y_validation.csv",
+    "Unchanged source: data/plan_a20/splits/meta_train.csv",
+    "Unchanged source: data/plan_a20/splits/meta_validation.csv",
+    "Unchanged source: run_decision_tree20.py",
+    "Unchanged source: src/baseline_models20.py",
+    "Unchanged source: src/plan_a20_interface.py",
+    "Unchanged source: src/model_interface.py",
+    "Unchanged source: artifacts/plan_a20/feature_contract.json"
+  ],
+  "test_loaded": false
+}

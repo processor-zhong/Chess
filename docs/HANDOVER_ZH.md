@@ -1,6 +1,12 @@
 # 小组后续操作说明
 
-## 推荐阅读顺序
+## 新增提交入口
+
+本次传统模型比较请先读[SUBMISSION_ZH.md](SUBMISSION_ZH.md)，再打开根目录Baseline_Model_Comparison.ipynb。
+包含Dummy、LR、GaussianNB、决策树、RF和HistGB；训练时间CV选参，固定验证评价。
+以下说明描述原仓库RF交接；“不比较不同算法”等边界仅适用于该历史版本。
+
+## 原RF版本推荐阅读顺序
 
 README → Modelling_Evaluation.ipynb → MODELLING_EVALUATION.md → DATA_PROTOCOL.md。
 Notebook是已执行的结果查看器；实际训练和评估代码在src/rf_experiment20.py，调用入口为run_rf_modelling20.py。

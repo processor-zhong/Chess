@@ -1,18 +1,37 @@
 # Chess outcome prediction after 10 full moves
 
-CA6001 group handover: **Random Forest after 10 full moves (20 plies)**.
+CA6001 group handover: **Outcome prediction after 10 full moves (20 plies)**.
 
-使用双方各前10步结束时的信息，预测 **Black win / Draw / White win**。只使用随机森林，保留“赛前6列”与“赛前＋开局46列”的特征实验。**此仓库不包含Stockfish扩展或旧10半回合实验。**
+使用双方各前10步结束时的信息，预测 **Black win / Draw / White win**。保留“赛前6列”与“赛前＋开局46列”的特征实验。**此仓库不包含Stockfish扩展或旧10半回合实验。**
 
-## 先从这里开始
+## 本次提交：基础模型比较与调参
 
-1. 阅读中文操作说明 [docs/HANDOVER_ZH.md](docs/HANDOVER_ZH.md)。
-2. 在项目根目录打开 [Modelling_Evaluation.ipynb](Modelling_Evaluation.ipynb)，查看已执行的建模与评估结果。Run All只读取保存结果，不重新训练或评分测试集。
-3. 阅读 [docs/MODELLING_EVALUATION.md](docs/MODELLING_EVALUATION.md)，了解冻结参数、结果和局限。
+多数类基线、逻辑回归、高斯朴素贝叶斯、单棵决策树、随机森林、直方图梯度提升。
+对比赛前6列和赛前＋开局46列；训练内三折时间CV选参，固定验证集评价。
+本次主线不包含神经网络。初始配置是仓库starter设置，不全部等同于sklearn默认参数。
+
+1. [提交说明与报告摘要](docs/SUBMISSION_ZH.md)：范围、结果、RF来源和文件清单。
+2. [Baseline_Model_Comparison.ipynb](Baseline_Model_Comparison.ipynb)：已执行的比较、调参、三分类混淆矩阵和ROC。
+3. [统一比较表与图](modelling_baselines/comparison_20ply/COMPARISON_ZH.md)。
+4. [方法与参数网格](docs/BASELINE_MODELS_ZH.md)。
+
+```bash
+python verify_snapshot.py
+python verify_baseline_models20.py --reload-models
+python verify_decision_tree20.py --reload-models
+python -m unittest discover -s tests -v
+```
+
+## 原仓库已经包含的随机森林
+
+原提交`0bf217e`已经提供RF训练、调参、模型和评估；相关代码及`modelling_rf/`结果保留。
+新增RF比较使用另一套选参协议，具体差异见[提交说明](docs/SUBMISSION_ZH.md)。
+原入口为[Modelling_Evaluation.ipynb](Modelling_Evaluation.ipynb)和[原RF说明](docs/MODELLING_EVALUATION.md)。
+下方历史测试成绩不属于新增多模型比较的验证成绩。
 
 ## 环境
 
-推荐 **Python 3.12**（实际验证3.12.14；固定依赖要求Python >=3.11）。
+推荐 **Python 3.12**（本次整理验证3.12.15；固定依赖要求Python >=3.11）。
 
 ```bash
 git clone https://github.com/processor-zhong/Chess.git
@@ -27,7 +46,7 @@ jupyter lab
 
 只跑脚本可安装 `requirements.txt`。模型文件和数据都已包含，不需要重新下载数据或重新训练才能查看结果。
 
-## 已有最终测试结果
+## 已有随机森林历史测试结果
 
 同一批2,565场测试对局；两个信息集使用相同随机森林参数。
 
@@ -47,6 +66,9 @@ jupyter lab
 
 ```text
 Modelling_Evaluation.ipynb        已执行结果查看入口
+Baseline_Model_Comparison.ipynb  新增多模型开发比较入口
+run_baseline_models20.py         初始模型、训练内调参、固定验证评估
+verify_baseline_models20.py      不读取测试集的结果核对
 README.md
 requirements*.txt
 run_plan_a20.py                  生成20半回合输入
@@ -68,6 +90,9 @@ modelling_rf/run_20261025_20ply_01/
   tables/                        CV、验证、测试、分类别指标及逐场预测
   figures/                       指标图、混淆矩阵、重要性图
   artifacts/                     流程、冻结配置和结果验证记录
+
+modelling_baselines/run_20261025_20ply_01/
+  tables/ figures/ models/ artifacts/  新多模型开发结果（无测试成绩）
 docs/                            数据协议、操作和结果说明
 ```
 

@@ -1,13 +1,18 @@
 [
   {
     "path": ".gitattributes",
-    "bytes": 60,
-    "sha256": "44ef593d9e269549389f55812d45ab176a67c697d4cec3c6d16c52efcda200c1"
+    "bytes": 271,
+    "sha256": "adb2e0c8653a1fc034d38920a20c45617031a71fbb8cef95d66f3e2d3cf8a2c0"
   },
   {
     "path": ".gitignore",
-    "bytes": 269,
-    "sha256": "1bb5562b95c5dee391266613b42dba3b37cf39fc06958a333254f4ed6e9a5685"
+    "bytes": 298,
+    "sha256": "831a1bef1dc5dbfda216b21f2ab4a7b2c271fb883bf836236fe3b71132e61806"
+  },
+  {
+    "path": "Baseline_Model_Comparison.ipynb",
+    "bytes": 1364463,
+    "sha256": "739f85ce1f62bddcfc08e735523fc2c6cdcba536fdc4d64a494f7b71ee88a762"
   },
   {
     "path": "Modelling_Evaluation.ipynb",
@@ -16,8 +21,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 4983,
-    "sha256": "5f1b530b0739db30e87684dd7cc85287e0650f5eeff0b980a27ea3e7516308c7"
+    "bytes": 6304,
+    "sha256": "3de044451ef342f07631878a436b49a5f2f218b1d15003443d29655ae7eca212"
   },
   {
     "path": "artifacts/plan_a20/feature_contract.json",
@@ -53,6 +58,16 @@
     "path": "artifacts/upstream/split_protocol.json",
     "bytes": 555,
     "sha256": "77a036ad72f5847738ff32225d3e626fcca86ad3e5fd780c6526310a0abb557f"
+  },
+  {
+    "path": "build_submission20.py",
+    "bytes": 3290,
+    "sha256": "c37b6d7023c0acde60c3007d47676c0a2ccb6b8c09c97044c78f8ba9c73fe31e"
+  },
+  {
+    "path": "compare_saved_models20.py",
+    "bytes": 11143,
+    "sha256": "5bab0376175cf9b587b27525cad73309d7f8db3ce5f3972650392e6ad0d4c178"
   },
   {
     "path": "data/plan_a20/holdout/X_test.csv",
@@ -140,19 +155,554 @@
     "sha256": "5e9f92d2dde86c1a86ec1a6c40572573d321ee4a16a2670ebe1f36613fb9df53"
   },
   {
+    "path": "docs/BASELINE_MODELS_ZH.md",
+    "bytes": 7045,
+    "sha256": "e773b10145f5cae8b79b2f4df1a0100d8ff283759d6e40131a6f9433e7e4dae2"
+  },
+  {
     "path": "docs/DATA_PROTOCOL.md",
     "bytes": 2315,
     "sha256": "c589fac9134b57e974f425186d58edbd50cf3214845a092ea8337685f6ff9dfd"
   },
   {
     "path": "docs/HANDOVER_ZH.md",
-    "bytes": 3123,
-    "sha256": "cf34419dd2e24167f3049867df811f53386b6e14b9c1e8268dbfb5e149bd5984"
+    "bytes": 3491,
+    "sha256": "877b005168f59715956c88f0b77438bcfb34f649765892e2ac3194615d45d0bb"
   },
   {
     "path": "docs/MODELLING_EVALUATION.md",
     "bytes": 2038,
     "sha256": "eccb1e874b922a5f1cb2fcab77d094675653204ea0a5cb93b3d8da2346856105"
+  },
+  {
+    "path": "docs/SUBMISSION_ZH.md",
+    "bytes": 6354,
+    "sha256": "73ade6b4d4f1159d713a868b4fe824e86d2480a4ec49992a1759c1036606cc3a"
+  },
+  {
+    "path": "modelling_baselines/comparison_20ply/COMPARISON_ZH.md",
+    "bytes": 2633,
+    "sha256": "76a24565e88f8e191ef53fb564f163116114cecac92a5a7ec14ed88f7ca2f871"
+  },
+  {
+    "path": "modelling_baselines/comparison_20ply/all_initial_tuned_metrics.csv",
+    "bytes": 7404,
+    "sha256": "9264eed5bf57bbed173ae08eb73c28c2c7cba0f3777991db3a3578a3bd2f790d"
+  },
+  {
+    "path": "modelling_baselines/comparison_20ply/all_models_comparison.png",
+    "bytes": 182650,
+    "sha256": "b401bf01070977e28978e030298f817e255c639c8e8cbfd4d61fb4c9f2df3ecf"
+  },
+  {
+    "path": "modelling_baselines/comparison_20ply/cv_selected_metrics.csv",
+    "bytes": 4446,
+    "sha256": "bd7191c07ec0e971213c984bb8a824c5851f0a8dd7507590993d55bab198dfcd"
+  },
+  {
+    "path": "modelling_baselines/comparison_20ply/provenance.json",
+    "bytes": 465,
+    "sha256": "db156dc8ed6547cd3505e1582a5d619a36b2cebffdfe5db737e53805785712ac"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/RESULTS_ZH.md",
+    "bytes": 5178,
+    "sha256": "cea391ed7170646ff3b8955a67dd5c8460517b4a769ac926e2e6f0e733a3a429"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/artifacts/development_complete.json",
+    "bytes": 364,
+    "sha256": "6df1257e49f6add00bb9bcb043639aadeb66d9e90d2f36882cd85d485215d388"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/artifacts/frozen_config.json",
+    "bytes": 2174,
+    "sha256": "4298a1c8c00227f8f3d91db1abe3712bc0da5b0e7a2f75021d86ad4260494f4a"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/artifacts/output_hashes.json",
+    "bytes": 10800,
+    "sha256": "272a59191ba90a211a5e15e5170e9c149fa14d0620848e9508d6e3f09e6aea78"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/artifacts/protocol.json",
+    "bytes": 10036,
+    "sha256": "20f011b815bbafdfbc77dd14af5e906e6f2ec786f4735d55703dc02aefd89125"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/artifacts/result_verification.json",
+    "bytes": 12380,
+    "sha256": "214dbded4b63e791d9da1a5844f2e14362437fd6616ef1c60cdb1e809a965050"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/figures/01_validation_comparison.png",
+    "bytes": 119451,
+    "sha256": "7b59f2a4954b6c2e0c25b238933c5f72a6e3c815af0f8c6c92273707317b1420"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/figures/02_combined_confusion.png",
+    "bytes": 192915,
+    "sha256": "794664d65bbdba3154bd571a05a41c75d4f841d47706cf90609842a34413f055"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/figures/03_training_validation_gap.png",
+    "bytes": 51974,
+    "sha256": "0015729b2b928cc15d4f59b07eefbb50683d5eb2e7bf2e7bee250b9bed56c6c9"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/figures/04_search_cv_scores.png",
+    "bytes": 260323,
+    "sha256": "a3366532f8c6da172ec92fad7b8a0816d4646067552f71eb6e01f644c480edd9"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/figures/05_combined_roc.png",
+    "bytes": 165320,
+    "sha256": "9e4d1acbac7f1865b5b934627cbfd54e9d48c24e5b8d1c4cc0af91da54175780"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/models/combined_dummy_initial.joblib",
+    "bytes": 1630,
+    "sha256": "c9f390c051e3ab4ef0908c9e4e04613e8b0586822bcca1f2b99f2761e2bdf3e2"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/models/combined_gaussian_nb_initial.joblib",
+    "bytes": 4747,
+    "sha256": "0fb792516b8e5a209ba14cc1e5ef7580b00cc8caa03839fc8ee0fc87d4dfb8cc"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/models/combined_gaussian_nb_tuned.joblib",
+    "bytes": 4731,
+    "sha256": "7f7a406180114ffcde2a63906246df88ee2f5e83a3e5a26f9caa721d76d49238"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/models/combined_gradient_boosting_initial.joblib",
+    "bytes": 305448,
+    "sha256": "b3e34dd77842badd48857e9e4c0e4d9f1c27cfd94309bbf2eccf610b9f38f1da"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/models/combined_gradient_boosting_tuned.joblib",
+    "bytes": 136208,
+    "sha256": "c5bbd22cf57560f32e9a4c47961d12a94d9da4fd1dd2af5af5494a61dd5aaa04"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/models/combined_logistic_initial.joblib",
+    "bytes": 3789,
+    "sha256": "b07e17f17a7df2e0498cc311e6ea6609241b31bddfc2abd2d4fd095c1938f11a"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/models/combined_logistic_tuned.joblib",
+    "bytes": 3798,
+    "sha256": "0d8a43566ab65feed0cd4fccb65e368c42177e2a2e42b4c0cc90f7b29412f97e"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/models/combined_random_forest_initial.joblib",
+    "bytes": 13454237,
+    "sha256": "ff427adeb1f9037ee1c26d2a494f17b77ce7c11020a4615433165f5fd22f72ef"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/models/combined_random_forest_tuned.joblib",
+    "bytes": 2014496,
+    "sha256": "4441345e2060a8893bcb9411c35d424943a5c319787233712d91ff78b2607504"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/models/pregame_dummy_initial.joblib",
+    "bytes": 932,
+    "sha256": "62688f42c841f4101df010d4cce355f81238b9f983500f83e631a5acd216be46"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/models/pregame_gaussian_nb_initial.joblib",
+    "bytes": 1589,
+    "sha256": "27d83aecff53f86f67f13e97fbecd0201175ead3b17feb2c9eb01965731fdf0d"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/models/pregame_gaussian_nb_tuned.joblib",
+    "bytes": 1593,
+    "sha256": "76d9f2669439aab7a955c8e9561ca6141df855b7a3c262eaa2baf1550781de1c"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/models/pregame_gradient_boosting_initial.joblib",
+    "bytes": 300724,
+    "sha256": "2e6abfd3f0ecb4b803b646b4f337e7ef11791670cbe4f96dd7702728a5eb1a71"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/models/pregame_gradient_boosting_tuned.joblib",
+    "bytes": 131054,
+    "sha256": "2e54ec159867216a0f5b120f0ec01690fe9a7db9334b43233fe16deb34ee52cf"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/models/pregame_logistic_initial.joblib",
+    "bytes": 1516,
+    "sha256": "afa0fce62cbf98a736d93720069a27b4e2d912a25f6bb3a0b55a111ad8afd81f"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/models/pregame_logistic_tuned.joblib",
+    "bytes": 1516,
+    "sha256": "afa0fce62cbf98a736d93720069a27b4e2d912a25f6bb3a0b55a111ad8afd81f"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/models/pregame_random_forest_initial.joblib",
+    "bytes": 13178294,
+    "sha256": "3c93c03af1126fa426e3a8c2d2d22286a00a81934b846266c5160a06027f524b"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/models/pregame_random_forest_tuned.joblib",
+    "bytes": 7298712,
+    "sha256": "9b9e636cfc4aeb1aa693096a797e85be27fc5697b1c784c06750da661215bf72"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/combined_dummy_initial_confusion.csv",
+    "bytes": 71,
+    "sha256": "eaa964f7eea01949c3ca705035d35a6cc691b5da900c02de9b033e593c5bc189"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/combined_dummy_initial_predictions.csv",
+    "bytes": 163150,
+    "sha256": "3123185978efe0e1083d6309dc574d63a41c3bb220b67a793ff91960c27e84b6"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/combined_gaussian_nb_initial_confusion.csv",
+    "bytes": 75,
+    "sha256": "62b6cc35504f6032383dc6fc1824f77400847ada91f246814583279513439040"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/combined_gaussian_nb_initial_predictions.csv",
+    "bytes": 283536,
+    "sha256": "660d6934f83e1a96d9fc39050f6aa4b18b60862dbb143c33d53a3d7cf50dc919"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/combined_gaussian_nb_tuned_confusion.csv",
+    "bytes": 75,
+    "sha256": "b5a299e3e3a619d43d41da6e18633916573ca43fdf8846950ea7d15b8dc88fb0"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/combined_gaussian_nb_tuned_predictions.csv",
+    "bytes": 283313,
+    "sha256": "b875ff82cdc0c210e012a17fcac5429addf966963bc063616a878dd8e7deb595"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/combined_gradient_boosting_initial_confusion.csv",
+    "bytes": 73,
+    "sha256": "817534f7bd011b30262b2ec6a13eebd5043d339e06af5ba91e33cb81de78e76c"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/combined_gradient_boosting_initial_predictions.csv",
+    "bytes": 282464,
+    "sha256": "0b13cb9828039453574f90863c7c4906fdda59ffb542b7b77fb86d7bd546414d"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/combined_gradient_boosting_tuned_confusion.csv",
+    "bytes": 73,
+    "sha256": "714b5e4f7886b21aa902fbebc549cddd930015fb9c8a1fb52e4341ec0323a553"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/combined_gradient_boosting_tuned_predictions.csv",
+    "bytes": 282226,
+    "sha256": "08af1c576c5bc15f50a746ce4dce137e2643439475b5d9b5d7ee8c512d3e6d3b"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/combined_logistic_initial_confusion.csv",
+    "bytes": 73,
+    "sha256": "ddfbcd981c1fbc2d99c3520649bb4eaf842b3995bf7da983b52b7a03c5ec26ed"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/combined_logistic_initial_predictions.csv",
+    "bytes": 282069,
+    "sha256": "3fd455675e0ef0dba1af86f053aae543e3aeda90ac614ce9445b9d35854605f1"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/combined_logistic_tuned_confusion.csv",
+    "bytes": 73,
+    "sha256": "64c26477866a8ee6768c47066e6dc9433e868ffc426c271f3e676f54cd2001ab"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/combined_logistic_tuned_predictions.csv",
+    "bytes": 282050,
+    "sha256": "e561a68e196003631b2c828fe9dca440ee4c05496d5feeabe2234ceecc538afa"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/combined_random_forest_initial_confusion.csv",
+    "bytes": 73,
+    "sha256": "edcb2635da3a1295f7772bfd3f6cf13bab6c5cdc27dbbc81cc6ad0026e59fb2f"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/combined_random_forest_initial_predictions.csv",
+    "bytes": 281942,
+    "sha256": "d3246ba816283f8b7089853a2041f89373974abeb193f1bb052c674fd2a1e968"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/combined_random_forest_tuned_confusion.csv",
+    "bytes": 78,
+    "sha256": "1528902487448527d848da6dd5cf2aae1661f09edd0204cf0429534ecf66cc6c"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/combined_random_forest_tuned_predictions.csv",
+    "bytes": 280695,
+    "sha256": "2d61d0c30fcd2a5ffdb1ca9becc1f447f59458efac9559a783725b3fbf2f8c5b"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/cv_fold_metrics.csv",
+    "bytes": 49762,
+    "sha256": "f6004d40d75a0e4402669a2935f325065dd50e1212a7844010efc78f6bd0c0e8"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/cv_folds.csv",
+    "bytes": 266,
+    "sha256": "a9209d58e0325c6b2dd96a740fcdae02eaa69d38261eb0243c7c2ccf45a43673"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/cv_summary.csv",
+    "bytes": 15525,
+    "sha256": "7961e11eeddacaa7c2c2446d911c752acc4e831a320a0935db37ff52c1278c86"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/pregame_dummy_initial_confusion.csv",
+    "bytes": 71,
+    "sha256": "eaa964f7eea01949c3ca705035d35a6cc691b5da900c02de9b033e593c5bc189"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/pregame_dummy_initial_predictions.csv",
+    "bytes": 163150,
+    "sha256": "3123185978efe0e1083d6309dc574d63a41c3bb220b67a793ff91960c27e84b6"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/pregame_gaussian_nb_initial_confusion.csv",
+    "bytes": 75,
+    "sha256": "e0b2ff1cbfb2486c17749d37589b26f298e1fabf93455f728299a3f08462af78"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/pregame_gaussian_nb_initial_predictions.csv",
+    "bytes": 282584,
+    "sha256": "7fd2f214fd2aa12ccb092589e5462a9d90d506ee7f4ec213cb1a40548e156752"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/pregame_gaussian_nb_tuned_confusion.csv",
+    "bytes": 75,
+    "sha256": "e0b2ff1cbfb2486c17749d37589b26f298e1fabf93455f728299a3f08462af78"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/pregame_gaussian_nb_tuned_predictions.csv",
+    "bytes": 282642,
+    "sha256": "b7ebf9fc1b3b0a800b5422babf90e0571553a0bd08143fe6e39ff3ec7125254f"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/pregame_gradient_boosting_initial_confusion.csv",
+    "bytes": 73,
+    "sha256": "ed22f434ed1064545785b39f283412a1f5115d1a3c9f5c7a91d2f5e5be00cafa"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/pregame_gradient_boosting_initial_predictions.csv",
+    "bytes": 282384,
+    "sha256": "d0593debb3c27bf175023a1c5bf7fea4de5d598b2ac966b7955c4a17f50c2ecb"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/pregame_gradient_boosting_tuned_confusion.csv",
+    "bytes": 73,
+    "sha256": "749d099ee2256a56f9e79574bd411916e6a27f09e9da4fe2907ddb6ef5820ec8"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/pregame_gradient_boosting_tuned_predictions.csv",
+    "bytes": 282093,
+    "sha256": "b41ed4ef1207a73eebb6052f8437defdce63c9ae1534b64f8dc515ffb948af92"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/pregame_logistic_initial_confusion.csv",
+    "bytes": 73,
+    "sha256": "eb3d54e6564bb842d349242d23f1d3b231b684c913b8630d7d56105486bc58ca"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/pregame_logistic_initial_predictions.csv",
+    "bytes": 282036,
+    "sha256": "1a234ebf82ccff7dd865cfd93daa00545efef59c6bde27402db0e20f83354724"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/pregame_logistic_tuned_confusion.csv",
+    "bytes": 73,
+    "sha256": "eb3d54e6564bb842d349242d23f1d3b231b684c913b8630d7d56105486bc58ca"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/pregame_logistic_tuned_predictions.csv",
+    "bytes": 282036,
+    "sha256": "1a234ebf82ccff7dd865cfd93daa00545efef59c6bde27402db0e20f83354724"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/pregame_random_forest_initial_confusion.csv",
+    "bytes": 73,
+    "sha256": "a20740ab8879c52d7aa2f7080e6b78f6a2d6d27b2a461a0b15cf02b68efd1b5c"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/pregame_random_forest_initial_predictions.csv",
+    "bytes": 282259,
+    "sha256": "22f857d745fd01680a9d4e6875392e987fc2092982c079fedd597e03c35bddaf"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/pregame_random_forest_tuned_confusion.csv",
+    "bytes": 78,
+    "sha256": "cc1a1cb5e13adc1b101a613accc39f6791d779e9141eb68185e0e002e7a3bcc4"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/pregame_random_forest_tuned_predictions.csv",
+    "bytes": 281002,
+    "sha256": "d69c12f919847c3aefd7b0aa565154c93f25a89c1dc6288f33567092a998ba74"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/tuning_changes.csv",
+    "bytes": 1899,
+    "sha256": "125b0ad7a25827549a3c2c3ac73b81891d372752ba0ec3cbb426d4caf88bb54a"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/validation_metrics.csv",
+    "bytes": 6270,
+    "sha256": "362e123dc6f802c2408cad6b8146ebf499d504d9c66591042ae2b35818998fa9"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/validation_per_class.csv",
+    "bytes": 4661,
+    "sha256": "8d9f8e57ebff8cd282787fbbcb6255a6f3762f30fff565ba7c5b79bfb37610b7"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_20ply_01/tables/validation_subgroups.csv",
+    "bytes": 6281,
+    "sha256": "48e68c6e4d6e69dd5dd7a9a169769be0beeeee2a5b1e59fa5c961d5e0c03e9da"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/RESULTS_ZH.md",
+    "bytes": 1632,
+    "sha256": "7c775ae5bdfb4c153b7d900233b3b8c054070931fad688c16872a0402b937cd7"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/artifacts/development_complete.json",
+    "bytes": 175,
+    "sha256": "d58dcb3941144838c52231ea6f6e4ac771617b61387aaac6049aead168f0a116"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/artifacts/frozen_config.json",
+    "bytes": 614,
+    "sha256": "3f6a158b44df315b445474f59f993d87bfe443fdb8aa48e8bec1a9ed497939eb"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/artifacts/output_hashes.json",
+    "bytes": 3824,
+    "sha256": "c21b8c0fd8e229d4a496bae4d5d6c667d067328f2f311fecff81c4e19723170e"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/artifacts/protocol.json",
+    "bytes": 3916,
+    "sha256": "af4a86cd405079797201d52cff21d62b44a5cc3f884f1b88fb27eca1316b0b7e"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/artifacts/result_verification.json",
+    "bytes": 1350,
+    "sha256": "ee11ffca06146d6e836e9944d02079468daba904d07c7d702c87600ffcb14f61"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/figures/confusion_matrices.png",
+    "bytes": 144414,
+    "sha256": "097a70c230c6ce3f328fca6aa9a39dcb7714050a3df43c7b05da9c50f920c6f7"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/figures/training_validation_gap.png",
+    "bytes": 25411,
+    "sha256": "04af14cb4ac421b032d11127b5b7d76f156c3eeeaea9e462cdccfbd7d7222adc"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/models/combined_initial.joblib",
+    "bytes": 85646,
+    "sha256": "d3172c36f58e64b8b7b551bb47231a3ad3042d4cc315a0e1c44413d5a73a56fe"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/models/combined_tuned.joblib",
+    "bytes": 2679,
+    "sha256": "6c12a2bb8e1bb8ba2e9ebb4fb330f816aa90f3a665523cdfedecae3f89356ef5"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/models/pregame_initial.joblib",
+    "bytes": 110863,
+    "sha256": "f5185d2c197ec0531f0971c139e9512d8aca04353d7e1dbd7bbff8e283f4b839"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/models/pregame_tuned.joblib",
+    "bytes": 2023,
+    "sha256": "235bcf6ac879395e3d57b6816b317984b26be98e308fda8b25163256dbe31409"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/tables/combined_initial_confusion.csv",
+    "bytes": 69,
+    "sha256": "14b0399347a73ca35ea5710bcbf5d3f81ac1b9acf53efbff0f51b726e298ca6d"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/tables/combined_initial_predictions.csv",
+    "bytes": 163020,
+    "sha256": "025f39749b358eac738780fbef58066362933e7306a6d0a785b0551e645fb410"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/tables/combined_initial_top_tree.txt",
+    "bytes": 2023,
+    "sha256": "93591eff89e31b88767ac7f4da83f6352b2c35c817748cef2033d317433e1d80"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/tables/combined_tuned_confusion.csv",
+    "bytes": 67,
+    "sha256": "332b9096f6175d13cf1c8b69f2dcfd953a4758466bfcd25fabe4d3b1315faeb4"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/tables/combined_tuned_predictions.csv",
+    "bytes": 279899,
+    "sha256": "5a3ae215bb60970749d659b6c79e462bc8a745b962a358fc0c6cc59903ced016"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/tables/combined_tuned_top_tree.txt",
+    "bytes": 728,
+    "sha256": "1f74e24af0d1dec7bec63a88545b12d16a707a882f356eb710f52c4c7288764d"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/tables/cv_fold_metrics.csv",
+    "bytes": 18974,
+    "sha256": "e6a8f427ef299626ca0603b929f6f11ecf52824df772ee09bcd0ccf37148def5"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/tables/cv_summary.csv",
+    "bytes": 5994,
+    "sha256": "5f4e1da8c28efd68156ede33c019348894b2a944591e2eee390141d8d2e20117"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/tables/pregame_initial_confusion.csv",
+    "bytes": 69,
+    "sha256": "928e41246b3101b02957bd69284c4f908d325a1061f74354902e0cb4f59cf2fd"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/tables/pregame_initial_predictions.csv",
+    "bytes": 163393,
+    "sha256": "b644c8c2b26ebda2106d2c053c0549b36b402c45c64833f11bae8cad5562b747"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/tables/pregame_initial_top_tree.txt",
+    "bytes": 1947,
+    "sha256": "08ad5d03cb09aa63b07bc0dfe0d6769757318597dda812f7481d4eb5d9ecf6f4"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/tables/pregame_tuned_confusion.csv",
+    "bytes": 67,
+    "sha256": "bd19d0ad07660848c03e0373a9a5351f5d3a42556f499054deb4eead72fa7d83"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/tables/pregame_tuned_predictions.csv",
+    "bytes": 281913,
+    "sha256": "af188898b7eb9f1a45a006d089272ab636f444d3f5a48a3a038e9fecf05cb564"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/tables/pregame_tuned_top_tree.txt",
+    "bytes": 736,
+    "sha256": "0334dba6edc92e68cd7d907ce4f67f98e917740586b0727eb4bd552353748f98"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/tables/validation_metrics.csv",
+    "bytes": 1257,
+    "sha256": "009353709e60edf2e6b73722d70df2fc408d3aa5d33e01f15ef1317861dd7308"
+  },
+  {
+    "path": "modelling_baselines/run_20261025_tree_01/tables/validation_per_class.csv",
+    "bytes": 992,
+    "sha256": "9eb87b87ef37e1741302734a27804802c062ed95a95ce6103c8a63bcd1d7bdfc"
   },
   {
     "path": "modelling_rf/run_20261025_20ply_01/RESULTS_20ply_简要说明.md",
@@ -365,6 +915,16 @@
     "sha256": "778bc67174ab4b748b624445605f1f6723da1a0af6f44730378aad11f67b1943"
   },
   {
+    "path": "run_baseline_models20.py",
+    "bytes": 434,
+    "sha256": "c836061d4f11f5da90cac36989656ad5e428d3653e816e80af8837d0f5e0593d"
+  },
+  {
+    "path": "run_decision_tree20.py",
+    "bytes": 11803,
+    "sha256": "8d2658eb7d5bf4a30a8dc8fc6119496fad92902146c6b3c1fa1534da81e4318d"
+  },
+  {
     "path": "run_plan_a20.py",
     "bytes": 209,
     "sha256": "d61a024da57bfb36236f0082aeca1449e4d5bb63f64e4fa6c050243b9f5711cb"
@@ -378,6 +938,16 @@
     "path": "src/__init__.py",
     "bytes": 65,
     "sha256": "0d5ed6f091a27c99dd6e138bf4581d1b3ea4ef99081c91c0c69e676d619348ca"
+  },
+  {
+    "path": "src/baseline_models20.py",
+    "bytes": 17553,
+    "sha256": "08044ade4c8c2ae774a57d540a62b833f9e91c3bb18a952b35c783c156938651"
+  },
+  {
+    "path": "src/baseline_report20.py",
+    "bytes": 13656,
+    "sha256": "454f5999e1c7cde8995eac269223dabb7f0a66724f86db8c3757f5c21d757913"
   },
   {
     "path": "src/chess_data.py",
@@ -455,13 +1025,28 @@
     "sha256": "920d8f7a7998b71de8f2942a3d99eb33b30cdb68b3efa1376d144f0d60c885cd"
   },
   {
+    "path": "tests/test_baseline_models20.py",
+    "bytes": 2013,
+    "sha256": "05818fd254e891e9899469e876ce8eb57b83cd0658413b98385ed10b3f10ccca"
+  },
+  {
     "path": "validate_plan_a20.py",
     "bytes": 7803,
     "sha256": "b258b76f68f95c47c9040f34753779ba0835a0a2f98a06af70a2f72d13c179a7"
   },
   {
+    "path": "verify_baseline_models20.py",
+    "bytes": 1142,
+    "sha256": "98d37d353b921ca0140e0d5c0d1ede2a40541e392ccd1b8dd23c65b96464208f"
+  },
+  {
+    "path": "verify_decision_tree20.py",
+    "bytes": 4103,
+    "sha256": "370bfd863b7be8ae722c0a0c86b2375e0d9b6d9065ec5ebb0a83ff894ef7bd04"
+  },
+  {
     "path": "verify_snapshot.py",
-    "bytes": 3065,
-    "sha256": "b33d7697f270575a2d6536330febe58a1975019f2a30b6bdfa07d898bcbcb9b2"
+    "bytes": 3161,
+    "sha256": "9b713920f61eb07ffd317eda365f94e1fadd1cfe2d164b19b7b8230e8d0db617"
   }
 ]

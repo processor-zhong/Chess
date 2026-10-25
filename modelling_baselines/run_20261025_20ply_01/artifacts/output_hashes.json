@@ -1,0 +1,286 @@
+[
+  {
+    "path": "artifacts/development_complete.json",
+    "sha256": "6df1257e49f6add00bb9bcb043639aadeb66d9e90d2f36882cd85d485215d388"
+  },
+  {
+    "path": "artifacts/frozen_config.json",
+    "sha256": "4298a1c8c00227f8f3d91db1abe3712bc0da5b0e7a2f75021d86ad4260494f4a"
+  },
+  {
+    "path": "artifacts/protocol.json",
+    "sha256": "20f011b815bbafdfbc77dd14af5e906e6f2ec786f4735d55703dc02aefd89125"
+  },
+  {
+    "path": "artifacts/result_verification.json",
+    "sha256": "214dbded4b63e791d9da1a5844f2e14362437fd6616ef1c60cdb1e809a965050"
+  },
+  {
+    "path": "figures/01_validation_comparison.png",
+    "sha256": "7b59f2a4954b6c2e0c25b238933c5f72a6e3c815af0f8c6c92273707317b1420"
+  },
+  {
+    "path": "figures/02_combined_confusion.png",
+    "sha256": "794664d65bbdba3154bd571a05a41c75d4f841d47706cf90609842a34413f055"
+  },
+  {
+    "path": "figures/03_training_validation_gap.png",
+    "sha256": "0015729b2b928cc15d4f59b07eefbb50683d5eb2e7bf2e7bee250b9bed56c6c9"
+  },
+  {
+    "path": "figures/04_search_cv_scores.png",
+    "sha256": "a3366532f8c6da172ec92fad7b8a0816d4646067552f71eb6e01f644c480edd9"
+  },
+  {
+    "path": "figures/05_combined_roc.png",
+    "sha256": "9e4d1acbac7f1865b5b934627cbfd54e9d48c24e5b8d1c4cc0af91da54175780"
+  },
+  {
+    "path": "models/combined_dummy_initial.joblib",
+    "sha256": "c9f390c051e3ab4ef0908c9e4e04613e8b0586822bcca1f2b99f2761e2bdf3e2"
+  },
+  {
+    "path": "models/combined_gaussian_nb_initial.joblib",
+    "sha256": "0fb792516b8e5a209ba14cc1e5ef7580b00cc8caa03839fc8ee0fc87d4dfb8cc"
+  },
+  {
+    "path": "models/combined_gaussian_nb_tuned.joblib",
+    "sha256": "7f7a406180114ffcde2a63906246df88ee2f5e83a3e5a26f9caa721d76d49238"
+  },
+  {
+    "path": "models/combined_gradient_boosting_initial.joblib",
+    "sha256": "b3e34dd77842badd48857e9e4c0e4d9f1c27cfd94309bbf2eccf610b9f38f1da"
+  },
+  {
+    "path": "models/combined_gradient_boosting_tuned.joblib",
+    "sha256": "c5bbd22cf57560f32e9a4c47961d12a94d9da4fd1dd2af5af5494a61dd5aaa04"
+  },
+  {
+    "path": "models/combined_logistic_initial.joblib",
+    "sha256": "b07e17f17a7df2e0498cc311e6ea6609241b31bddfc2abd2d4fd095c1938f11a"
+  },
+  {
+    "path": "models/combined_logistic_tuned.joblib",
+    "sha256": "0d8a43566ab65feed0cd4fccb65e368c42177e2a2e42b4c0cc90f7b29412f97e"
+  },
+  {
+    "path": "models/combined_random_forest_initial.joblib",
+    "sha256": "ff427adeb1f9037ee1c26d2a494f17b77ce7c11020a4615433165f5fd22f72ef"
+  },
+  {
+    "path": "models/combined_random_forest_tuned.joblib",
+    "sha256": "4441345e2060a8893bcb9411c35d424943a5c319787233712d91ff78b2607504"
+  },
+  {
+    "path": "models/pregame_dummy_initial.joblib",
+    "sha256": "62688f42c841f4101df010d4cce355f81238b9f983500f83e631a5acd216be46"
+  },
+  {
+    "path": "models/pregame_gaussian_nb_initial.joblib",
+    "sha256": "27d83aecff53f86f67f13e97fbecd0201175ead3b17feb2c9eb01965731fdf0d"
+  },
+  {
+    "path": "models/pregame_gaussian_nb_tuned.joblib",
+    "sha256": "76d9f2669439aab7a955c8e9561ca6141df855b7a3c262eaa2baf1550781de1c"
+  },
+  {
+    "path": "models/pregame_gradient_boosting_initial.joblib",
+    "sha256": "2e6abfd3f0ecb4b803b646b4f337e7ef11791670cbe4f96dd7702728a5eb1a71"
+  },
+  {
+    "path": "models/pregame_gradient_boosting_tuned.joblib",
+    "sha256": "2e54ec159867216a0f5b120f0ec01690fe9a7db9334b43233fe16deb34ee52cf"
+  },
+  {
+    "path": "models/pregame_logistic_initial.joblib",
+    "sha256": "afa0fce62cbf98a736d93720069a27b4e2d912a25f6bb3a0b55a111ad8afd81f"
+  },
+  {
+    "path": "models/pregame_logistic_tuned.joblib",
+    "sha256": "afa0fce62cbf98a736d93720069a27b4e2d912a25f6bb3a0b55a111ad8afd81f"
+  },
+  {
+    "path": "models/pregame_random_forest_initial.joblib",
+    "sha256": "3c93c03af1126fa426e3a8c2d2d22286a00a81934b846266c5160a06027f524b"
+  },
+  {
+    "path": "models/pregame_random_forest_tuned.joblib",
+    "sha256": "9b9e636cfc4aeb1aa693096a797e85be27fc5697b1c784c06750da661215bf72"
+  },
+  {
+    "path": "RESULTS_ZH.md",
+    "sha256": "cea391ed7170646ff3b8955a67dd5c8460517b4a769ac926e2e6f0e733a3a429"
+  },
+  {
+    "path": "tables/combined_dummy_initial_confusion.csv",
+    "sha256": "eaa964f7eea01949c3ca705035d35a6cc691b5da900c02de9b033e593c5bc189"
+  },
+  {
+    "path": "tables/combined_dummy_initial_predictions.csv",
+    "sha256": "3123185978efe0e1083d6309dc574d63a41c3bb220b67a793ff91960c27e84b6"
+  },
+  {
+    "path": "tables/combined_gaussian_nb_initial_confusion.csv",
+    "sha256": "62b6cc35504f6032383dc6fc1824f77400847ada91f246814583279513439040"
+  },
+  {
+    "path": "tables/combined_gaussian_nb_initial_predictions.csv",
+    "sha256": "660d6934f83e1a96d9fc39050f6aa4b18b60862dbb143c33d53a3d7cf50dc919"
+  },
+  {
+    "path": "tables/combined_gaussian_nb_tuned_confusion.csv",
+    "sha256": "b5a299e3e3a619d43d41da6e18633916573ca43fdf8846950ea7d15b8dc88fb0"
+  },
+  {
+    "path": "tables/combined_gaussian_nb_tuned_predictions.csv",
+    "sha256": "b875ff82cdc0c210e012a17fcac5429addf966963bc063616a878dd8e7deb595"
+  },
+  {
+    "path": "tables/combined_gradient_boosting_initial_confusion.csv",
+    "sha256": "817534f7bd011b30262b2ec6a13eebd5043d339e06af5ba91e33cb81de78e76c"
+  },
+  {
+    "path": "tables/combined_gradient_boosting_initial_predictions.csv",
+    "sha256": "0b13cb9828039453574f90863c7c4906fdda59ffb542b7b77fb86d7bd546414d"
+  },
+  {
+    "path": "tables/combined_gradient_boosting_tuned_confusion.csv",
+    "sha256": "714b5e4f7886b21aa902fbebc549cddd930015fb9c8a1fb52e4341ec0323a553"
+  },
+  {
+    "path": "tables/combined_gradient_boosting_tuned_predictions.csv",
+    "sha256": "08af1c576c5bc15f50a746ce4dce137e2643439475b5d9b5d7ee8c512d3e6d3b"
+  },
+  {
+    "path": "tables/combined_logistic_initial_confusion.csv",
+    "sha256": "ddfbcd981c1fbc2d99c3520649bb4eaf842b3995bf7da983b52b7a03c5ec26ed"
+  },
+  {
+    "path": "tables/combined_logistic_initial_predictions.csv",
+    "sha256": "3fd455675e0ef0dba1af86f053aae543e3aeda90ac614ce9445b9d35854605f1"
+  },
+  {
+    "path": "tables/combined_logistic_tuned_confusion.csv",
+    "sha256": "64c26477866a8ee6768c47066e6dc9433e868ffc426c271f3e676f54cd2001ab"
+  },
+  {
+    "path": "tables/combined_logistic_tuned_predictions.csv",
+    "sha256": "e561a68e196003631b2c828fe9dca440ee4c05496d5feeabe2234ceecc538afa"
+  },
+  {
+    "path": "tables/combined_random_forest_initial_confusion.csv",
+    "sha256": "edcb2635da3a1295f7772bfd3f6cf13bab6c5cdc27dbbc81cc6ad0026e59fb2f"
+  },
+  {
+    "path": "tables/combined_random_forest_initial_predictions.csv",
+    "sha256": "d3246ba816283f8b7089853a2041f89373974abeb193f1bb052c674fd2a1e968"
+  },
+  {
+    "path": "tables/combined_random_forest_tuned_confusion.csv",
+    "sha256": "1528902487448527d848da6dd5cf2aae1661f09edd0204cf0429534ecf66cc6c"
+  },
+  {
+    "path": "tables/combined_random_forest_tuned_predictions.csv",
+    "sha256": "2d61d0c30fcd2a5ffdb1ca9becc1f447f59458efac9559a783725b3fbf2f8c5b"
+  },
+  {
+    "path": "tables/cv_fold_metrics.csv",
+    "sha256": "f6004d40d75a0e4402669a2935f325065dd50e1212a7844010efc78f6bd0c0e8"
+  },
+  {
+    "path": "tables/cv_folds.csv",
+    "sha256": "a9209d58e0325c6b2dd96a740fcdae02eaa69d38261eb0243c7c2ccf45a43673"
+  },
+  {
+    "path": "tables/cv_summary.csv",
+    "sha256": "7961e11eeddacaa7c2c2446d911c752acc4e831a320a0935db37ff52c1278c86"
+  },
+  {
+    "path": "tables/pregame_dummy_initial_confusion.csv",
+    "sha256": "eaa964f7eea01949c3ca705035d35a6cc691b5da900c02de9b033e593c5bc189"
+  },
+  {
+    "path": "tables/pregame_dummy_initial_predictions.csv",
+    "sha256": "3123185978efe0e1083d6309dc574d63a41c3bb220b67a793ff91960c27e84b6"
+  },
+  {
+    "path": "tables/pregame_gaussian_nb_initial_confusion.csv",
+    "sha256": "e0b2ff1cbfb2486c17749d37589b26f298e1fabf93455f728299a3f08462af78"
+  },
+  {
+    "path": "tables/pregame_gaussian_nb_initial_predictions.csv",
+    "sha256": "7fd2f214fd2aa12ccb092589e5462a9d90d506ee7f4ec213cb1a40548e156752"
+  },
+  {
+    "path": "tables/pregame_gaussian_nb_tuned_confusion.csv",
+    "sha256": "e0b2ff1cbfb2486c17749d37589b26f298e1fabf93455f728299a3f08462af78"
+  },
+  {
+    "path": "tables/pregame_gaussian_nb_tuned_predictions.csv",
+    "sha256": "b7ebf9fc1b3b0a800b5422babf90e0571553a0bd08143fe6e39ff3ec7125254f"
+  },
+  {
+    "path": "tables/pregame_gradient_boosting_initial_confusion.csv",
+    "sha256": "ed22f434ed1064545785b39f283412a1f5115d1a3c9f5c7a91d2f5e5be00cafa"
+  },
+  {
+    "path": "tables/pregame_gradient_boosting_initial_predictions.csv",
+    "sha256": "d0593debb3c27bf175023a1c5bf7fea4de5d598b2ac966b7955c4a17f50c2ecb"
+  },
+  {
+    "path": "tables/pregame_gradient_boosting_tuned_confusion.csv",
+    "sha256": "749d099ee2256a56f9e79574bd411916e6a27f09e9da4fe2907ddb6ef5820ec8"
+  },
+  {
+    "path": "tables/pregame_gradient_boosting_tuned_predictions.csv",
+    "sha256": "b41ed4ef1207a73eebb6052f8437defdce63c9ae1534b64f8dc515ffb948af92"
+  },
+  {
+    "path": "tables/pregame_logistic_initial_confusion.csv",
+    "sha256": "eb3d54e6564bb842d349242d23f1d3b231b684c913b8630d7d56105486bc58ca"
+  },
+  {
+    "path": "tables/pregame_logistic_initial_predictions.csv",
+    "sha256": "1a234ebf82ccff7dd865cfd93daa00545efef59c6bde27402db0e20f83354724"
+  },
+  {
+    "path": "tables/pregame_logistic_tuned_confusion.csv",
+    "sha256": "eb3d54e6564bb842d349242d23f1d3b231b684c913b8630d7d56105486bc58ca"
+  },
+  {
+    "path": "tables/pregame_logistic_tuned_predictions.csv",
+    "sha256": "1a234ebf82ccff7dd865cfd93daa00545efef59c6bde27402db0e20f83354724"
+  },
+  {
+    "path": "tables/pregame_random_forest_initial_confusion.csv",
+    "sha256": "a20740ab8879c52d7aa2f7080e6b78f6a2d6d27b2a461a0b15cf02b68efd1b5c"
+  },
+  {
+    "path": "tables/pregame_random_forest_initial_predictions.csv",
+    "sha256": "22f857d745fd01680a9d4e6875392e987fc2092982c079fedd597e03c35bddaf"
+  },
+  {
+    "path": "tables/pregame_random_forest_tuned_confusion.csv",
+    "sha256": "cc1a1cb5e13adc1b101a613accc39f6791d779e9141eb68185e0e002e7a3bcc4"
+  },
+  {
+    "path": "tables/pregame_random_forest_tuned_predictions.csv",
+    "sha256": "d69c12f919847c3aefd7b0aa565154c93f25a89c1dc6288f33567092a998ba74"
+  },
+  {
+    "path": "tables/tuning_changes.csv",
+    "sha256": "125b0ad7a25827549a3c2c3ac73b81891d372752ba0ec3cbb426d4caf88bb54a"
+  },
+  {
+    "path": "tables/validation_metrics.csv",
+    "sha256": "362e123dc6f802c2408cad6b8146ebf499d504d9c66591042ae2b35818998fa9"
+  },
+  {
+    "path": "tables/validation_per_class.csv",
+    "sha256": "8d9f8e57ebff8cd282787fbbcb6255a6f3762f30fff565ba7c5b79bfb37610b7"
+  },
+  {
+    "path": "tables/validation_subgroups.csv",
+    "sha256": "48e68c6e4d6e69dd5dd7a9a169769be0beeeee2a5b1e59fa5c961d5e0c03e9da"
+  }
+]

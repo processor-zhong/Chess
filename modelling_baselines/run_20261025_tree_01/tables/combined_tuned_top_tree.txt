@@ -1,0 +1,22 @@
+|--- rating_diff <= 47.50
+|   |--- abs_rating_diff <= 189.50
+|   |   |--- material_diff <= 0.50
+|   |   |   |--- class: black
+|   |   |--- material_diff >  0.50
+|   |   |   |--- class: white
+|   |--- abs_rating_diff >  189.50
+|   |   |--- material_diff <= 0.50
+|   |   |   |--- class: black
+|   |   |--- material_diff >  0.50
+|   |   |   |--- class: black
+|--- rating_diff >  47.50
+|   |--- rating_diff <= 213.50
+|   |   |--- material_diff <= 1.50
+|   |   |   |--- class: white
+|   |   |--- material_diff >  1.50
+|   |   |   |--- class: white
+|   |--- rating_diff >  213.50
+|   |   |--- material_diff <= -3.50
+|   |   |   |--- class: black
+|   |   |--- material_diff >  -3.50
+|   |   |   |--- class: white

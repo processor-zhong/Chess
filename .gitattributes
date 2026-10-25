@@ -1,4 +1,10 @@
 * text=auto eol=lf
 *.csv -text
 *.joblib binary
+*.pt binary
+*.npz binary
 *.png binary
+# Frozen experiment outputs must keep the bytes used by their hash manifests.
+modelling_baselines/** -text
+Baseline_Model_Comparison.ipynb -text
+artifacts/repository_snapshot.json -text

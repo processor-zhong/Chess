@@ -1,0 +1,46 @@
+|--- rating_diff <= 47.50
+|   |--- abs_rating_diff <= 189.50
+|   |   |--- material_diff <= 0.50
+|   |   |   |--- material_diff <= -3.50
+|   |   |   |   |--- truncated branch of depth 13
+|   |   |   |--- material_diff >  -3.50
+|   |   |   |   |--- truncated branch of depth 35
+|   |   |--- material_diff >  0.50
+|   |   |   |--- black_attacked_squares <= 35.50
+|   |   |   |   |--- truncated branch of depth 17
+|   |   |   |--- black_attacked_squares >  35.50
+|   |   |   |   |--- truncated branch of depth 13
+|   |--- abs_rating_diff >  189.50
+|   |   |--- material_diff <= 0.50
+|   |   |   |--- white_attacked_squares <= 34.50
+|   |   |   |   |--- truncated branch of depth 22
+|   |   |   |--- white_attacked_squares >  34.50
+|   |   |   |   |--- truncated branch of depth 20
+|   |   |--- material_diff >  0.50
+|   |   |   |--- black_attacked_squares <= 34.50
+|   |   |   |   |--- truncated branch of depth 10
+|   |   |   |--- black_attacked_squares >  34.50
+|   |   |   |   |--- truncated branch of depth 8
+|--- rating_diff >  47.50
+|   |--- abs_rating_diff <= 213.50
+|   |   |--- material_diff <= 1.50
+|   |   |   |--- material_diff <= -1.50
+|   |   |   |   |--- truncated branch of depth 16
+|   |   |   |--- material_diff >  -1.50
+|   |   |   |   |--- truncated branch of depth 27
+|   |   |--- material_diff >  1.50
+|   |   |   |--- rating_diff <= 105.50
+|   |   |   |   |--- truncated branch of depth 10
+|   |   |   |--- rating_diff >  105.50
+|   |   |   |   |--- truncated branch of depth 10
+|   |--- abs_rating_diff >  213.50
+|   |   |--- material_diff <= -3.50
+|   |   |   |--- white_center_occupancy <= 0.50
+|   |   |   |   |--- truncated branch of depth 4
+|   |   |   |--- white_center_occupancy >  0.50
+|   |   |   |   |--- truncated branch of depth 8
+|   |   |--- material_diff >  -3.50
+|   |   |   |--- material_diff <= 0.50
+|   |   |   |   |--- truncated branch of depth 21
+|   |   |   |--- material_diff >  0.50
+|   |   |   |   |--- truncated branch of depth 17

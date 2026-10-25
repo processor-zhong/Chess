@@ -1,0 +1,46 @@
+|--- rating_diff <= 47.50
+|   |--- rating_diff <= -189.50
+|   |   |--- rating_diff <= -329.50
+|   |   |   |--- increment_seconds <= 22.50
+|   |   |   |   |--- truncated branch of depth 27
+|   |   |   |--- increment_seconds >  22.50
+|   |   |   |   |--- truncated branch of depth 9
+|   |   |--- rating_diff >  -329.50
+|   |   |   |--- increment_seconds <= 42.50
+|   |   |   |   |--- truncated branch of depth 39
+|   |   |   |--- increment_seconds >  42.50
+|   |   |   |   |--- truncated branch of depth 4
+|   |--- rating_diff >  -189.50
+|   |   |--- rating_diff <= -50.50
+|   |   |   |--- abs_rating_diff <= 133.50
+|   |   |   |   |--- truncated branch of depth 35
+|   |   |   |--- abs_rating_diff >  133.50
+|   |   |   |   |--- truncated branch of depth 33
+|   |   |--- rating_diff >  -50.50
+|   |   |   |--- avg_rating <= 1968.25
+|   |   |   |   |--- truncated branch of depth 38
+|   |   |   |--- avg_rating >  1968.25
+|   |   |   |   |--- truncated branch of depth 24
+|--- rating_diff >  47.50
+|   |--- rating_diff <= 213.50
+|   |   |--- avg_rating <= 2039.75
+|   |   |   |--- avg_rating <= 1671.75
+|   |   |   |   |--- truncated branch of depth 32
+|   |   |   |--- avg_rating >  1671.75
+|   |   |   |   |--- truncated branch of depth 33
+|   |   |--- avg_rating >  2039.75
+|   |   |   |--- rating_diff <= 121.00
+|   |   |   |   |--- truncated branch of depth 9
+|   |   |   |--- rating_diff >  121.00
+|   |   |   |   |--- truncated branch of depth 12
+|   |--- rating_diff >  213.50
+|   |   |--- abs_rating_diff <= 364.50
+|   |   |   |--- avg_rating <= 1736.50
+|   |   |   |   |--- truncated branch of depth 22
+|   |   |   |--- avg_rating >  1736.50
+|   |   |   |   |--- truncated branch of depth 22
+|   |   |--- abs_rating_diff >  364.50
+|   |   |   |--- rated <= 0.50
+|   |   |   |   |--- truncated branch of depth 22
+|   |   |   |--- rated >  0.50
+|   |   |   |   |--- truncated branch of depth 16
