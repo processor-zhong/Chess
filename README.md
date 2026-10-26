@@ -5,10 +5,12 @@ This CA6001 project studies whether human context improves chess-outcome predict
 The controlled experiment compares three in-game predictors:
 
 - **Direct Stockfish WDL:** no fitted classifier; the largest engine WDL probability becomes the prediction.
-- **Learned position only:** histogram gradient boosting using `score_cp`, `score_mate`, `wdl_wins`, `wdl_draws`, `ply`, `material_total`, and `material_diff`.
-- **Human-context joint model:** the same learner and position features, plus pre-match ratings, rated status, and time-control features.
+- **Position-only HGB:** histogram gradient boosting using `score_cp`, `score_mate`, `wdl_wins`, `wdl_draws`, `ply`, `material_total`, and `material_diff`.
+- **Human-context HGB (main):** the same histogram gradient boosting specification and position features, plus pre-match ratings, rated status, and time-control features.
 
-Percentage game progress is used only to select retrospective test positions. The models receive current `ply`, never the final game length or percentage progress.
+Percentage game progress is used only to select retrospective test positions. Calculating percentage requires the eventual final game length, which is unknown during prediction and would leak future information. The models therefore receive current `ply` only.
+
+The primary in-game metrics pool all available test snapshots at 10%, 25%, 50%, 75%, and 100% progress; they do not describe one checkpoint or a simple mean of five checkpoint scores. A separate pre-match HGB supplies only the initial 0% estimate. The final model after moves become available is the Human-context HGB.
 
 ## Main results
 
@@ -17,8 +19,8 @@ The cleaned dataset contains 19,113 unique games. Across all in-game test snapsh
 | Predictor | Accuracy | Macro-F1 | Log loss |
 |---|---:|---:|---:|
 | Direct Stockfish WDL | 47.6% | 43.4% | 5.751 |
-| Learned position only | 63.4% | 52.0% | 0.853 |
-| Human-context joint model | **68.7%** | **54.5%** | **0.714** |
+| Position-only HGB | 63.4% | 52.0% | 0.853 |
+| Human-context HGB (main) | **68.7%** | **54.5%** | **0.714** |
 
 Adding human context to the otherwise identical learned model improves accuracy by 5.4 percentage points, macro-F1 by 2.5 points, and log loss by 0.139. The main model progresses from 52.3% accuracy before play to 89.9% at the final recorded position. Direct WDL is especially weak early because Stockfish assigns substantial draw probability to balanced positions, whereas draws are rare in this human-game sample.
 
