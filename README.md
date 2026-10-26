@@ -9,11 +9,11 @@ The analysis compares:
 - a compact convolutional neural network trained on 17 board planes; and
 - probability-level fusion of the selected pre-match and position models.
 
-The final evaluation is a pure-prediction curve at 0%, 10%, 25%, 50%, 75%, and 100% of each recorded game. The last point is not replaced with the known result.
+The in-game models receive only the current board and current ply. Training and validation positions are sampled at fixed ply counts; final game length and percentage progress are never model inputs. Percentages are used only to group the retrospective test curve at 0%, 10%, 25%, 50%, 75%, and 100%. The last point is not replaced with the known result.
 
 ## Main results
 
-The cleaned dataset contains 19,113 unique games. On the held-out test set, pre-match accuracy is 52.3% with macro-F1 42.7%. The selected handcrafted position model outperforms the CNN. The fused model reaches 81.2% accuracy and 68.2% macro-F1 at the last recorded position.
+The cleaned dataset contains 19,113 unique games. On the held-out test set, pre-match accuracy is 52.3% with macro-F1 42.7%. The selected handcrafted position model outperforms the CNN on test macro-F1. The fused model reaches 78.8% accuracy and 65.9% macro-F1 at the last recorded position.
 
 ## Repository contents
 
