@@ -1,24 +1,30 @@
-# Progressive Chess Outcome Prediction
+# Human-Context Chess Outcome Prediction
 
-This CA6001 project predicts a chess game's three-class result—Black win, draw, or White win—before play and as moves become available.
+This CA6001 project studies whether human context improves chess-outcome prediction beyond an objective engine evaluation. Stockfish can estimate the strength of a position, but its WDL probabilities describe engine play. Human results may also depend on player strength, time control, and the practical difficulty of converting an advantage.
 
-The main in-game model jointly uses:
+The controlled experiment compares three in-game predictors:
 
-- pre-match ratings, rated status, and time control;
-- four Stockfish 19 indicators: `score_cp`, `score_mate`, `wdl_wins`, and `wdl_draws`; and
-- three transparent manual features: `ply`, `material_total`, and `material_diff`.
+- **Direct Stockfish WDL:** no fitted classifier; the largest engine WDL probability becomes the prediction.
+- **Learned position only:** histogram gradient boosting using `score_cp`, `score_mate`, `wdl_wins`, `wdl_draws`, `ply`, `material_total`, and `material_diff`.
+- **Human-context joint model:** the same learner and position features, plus pre-match ratings, rated status, and time-control features.
 
-A supervised CNN provides an end-to-end comparison using the board, pre-match features, current ply, and recorded game result. It does not use Stockfish targets or self-play.
+Percentage game progress is used only to select retrospective test positions. The models receive current `ply`, never the final game length or percentage progress.
 
 ## Main results
 
-The cleaned dataset contains 19,113 unique games. The selected pre-match model reaches 52.3% accuracy and 42.7% macro-F1. Across all in-game test snapshots, the joint Stockfish-assisted model reaches 68.7% accuracy and 54.5% macro-F1, compared with 63.9%/48.8% without Stockfish and 61.0%/47.8% for the CNN.
+The cleaned dataset contains 19,113 unique games. Across all in-game test snapshots:
 
-At the last recorded position, pure-prediction performance reaches 89.9% accuracy and 77.9% macro-F1. The known result is never substituted into the curve.
+| Predictor | Accuracy | Macro-F1 | Log loss |
+|---|---:|---:|---:|
+| Direct Stockfish WDL | 47.6% | 43.4% | 5.751 |
+| Learned position only | 63.4% | 52.0% | 0.853 |
+| Human-context joint model | **68.7%** | **54.5%** | **0.714** |
+
+Adding human context to the otherwise identical learned model improves accuracy by 5.4 percentage points, macro-F1 by 2.5 points, and log loss by 0.139. The main model progresses from 52.3% accuracy before play to 89.9% at the final recorded position. Direct WDL is especially weak early because Stockfish assigns substantial draw probability to balanced positions, whereas draws are rare in this human-game sample.
 
 ## Repository contents
 
-- `CA6001_chess_outcome_prediction.ipynb` — complete, executed analysis.
+- `CA6001_chess_outcome_prediction.ipynb` — complete, executed analysis and all experiments.
 - `docs/CA6001_Final_Report_Chess_Outcome_Prediction.docx` — final English report.
 - `figures/` — seven 300-DPI figures exported by the notebook.
 - `vendor/stockfish/` — Stockfish 19 Linux x86-64 binary, licence, and citation metadata.
@@ -59,7 +65,6 @@ python -m pip install --upgrade pip
 python -m pip install \
   ipykernel jupyterlab matplotlib nbclient nbformat numpy pandas \
   python-chess scikit-learn seaborn python-docx
-python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
 python -m jupyter lab
 ```
 
@@ -76,4 +81,3 @@ $env:STOCKFISH_EXECUTABLE = "C:\path\to\stockfish.exe"
 - Stockfish configuration: version 19, one thread, 1,000 nodes, WDL enabled.
 - Dataset SHA-256: `e7aadff104a610afb5403caf81c1461babecb0dc87760ff5eea7dc0e7a4a8129`.
 - Stockfish SHA-256: `0f83d24cc46d2c66c60f16001af5444873bc112b7d028594513426894c12da19`.
-- Percentage progress is used only for retrospective test reporting and is never a model input.
