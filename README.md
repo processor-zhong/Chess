@@ -1,102 +1,85 @@
-# Chess outcome prediction after 10 full moves
+# Human-Context Chess Outcome Prediction
 
-CA6001 group handover: **Random Forest after 10 full moves (20 plies)**.
+This CA6001 project studies whether human context improves chess-outcome prediction beyond an objective engine evaluation. Stockfish can estimate the strength of a position, but its WDL probabilities describe engine play. Human results may also depend on player strength, time control, and the practical difficulty of converting an advantage.
 
-使用双方各前10步结束时的信息，预测 **Black win / Draw / White win**。只使用随机森林，保留“赛前6列”与“赛前＋开局46列”的特征实验。**此仓库不包含Stockfish扩展或旧10半回合实验。**
+The controlled experiment compares three in-game predictors:
 
-## 先从这里开始
+- **Direct Stockfish WDL:** no fitted classifier; the largest engine WDL probability becomes the prediction.
+- **Position-only HGB:** histogram gradient boosting using `score_cp`, `score_mate`, `wdl_wins`, `wdl_draws`, `ply`, `material_total`, and `material_diff`.
+- **Human-context HGB (main):** the same histogram gradient boosting specification and position features, plus pre-match ratings, rated status, and time-control features.
 
-1. 阅读中文操作说明 [docs/HANDOVER_ZH.md](docs/HANDOVER_ZH.md)。
-2. 在项目根目录打开 [Modelling_Evaluation.ipynb](Modelling_Evaluation.ipynb)，查看已执行的建模与评估结果。Run All只读取保存结果，不重新训练或评分测试集。
-3. 阅读 [docs/MODELLING_EVALUATION.md](docs/MODELLING_EVALUATION.md)，了解冻结参数、结果和局限。
+Percentage game progress is used only to select retrospective test positions. Calculating percentage requires the eventual final game length, which is unknown during prediction and would leak future information. The models therefore receive current `ply` only.
 
-## 环境
+The primary in-game metrics pool all available test snapshots at 10%, 25%, 50%, 75%, and 100% progress; they do not describe one checkpoint or a simple mean of five checkpoint scores. A separate pre-match HGB supplies only the initial 0% estimate. The final model after moves become available is the Human-context HGB.
 
-推荐 **Python 3.12**（实际验证3.12.14；固定依赖要求Python >=3.11）。
+## Main results
+
+The cleaned dataset contains 19,113 unique games. Across all in-game test snapshots:
+
+| Predictor | Accuracy | Macro-F1 | Log loss |
+|---|---:|---:|---:|
+| Direct Stockfish WDL | 47.6% | 43.4% | 5.751 |
+| Position-only HGB | 63.4% | 52.0% | 0.853 |
+| Human-context HGB (main) | **68.7%** | **54.5%** | **0.714** |
+
+Adding human context to the otherwise identical learned model improves accuracy by 5.4 percentage points, macro-F1 by 2.5 points, and log loss by 0.139. The main model progresses from 52.3% accuracy before play to 89.9% at the final recorded position. Direct WDL is especially weak early because Stockfish assigns substantial draw probability to balanced positions, whereas draws are rare in this human-game sample.
+
+## Repository contents
+
+- `CA6001_chess_outcome_prediction.ipynb` — complete, executed analysis and all experiments.
+- `docs/CA6001_Final_Report_Chess_Outcome_Prediction.docx` — final English report.
+- `figures/` — seven 300-DPI figures exported by the notebook.
+- `vendor/stockfish/` — Stockfish 19 Linux x86-64 binary, licence, and citation metadata.
+- `pyproject.toml`, `uv.lock`, and `.python-version` — reproducible Python 3.11 environment.
+
+The notebook downloads the public [Chess Game Dataset (Lichess)](https://www.kaggle.com/datasets/datasnaek/chess) when `data/games.csv` is absent. On Linux x86-64 it can also download the pinned Stockfish 19 binary when the vendored executable is absent. Other platforms should set `STOCKFISH_EXECUTABLE` to a compatible Stockfish binary.
+
+Stockfish results are cached in `data/stockfish_features.csv`. The cache key includes the position, game and ply, engine binary hash, and node budget; rerunning does not append duplicates.
+
+## Run with uv
+
+From the repository root:
 
 ```bash
-git clone https://github.com/processor-zhong/Chess.git
-cd Chess
-python -m venv .venv
-# macOS / Linux
+UV_CACHE_DIR=.uv-cache uv sync --locked
+UV_CACHE_DIR=.uv-cache uv run jupyter lab
+```
+
+Open `CA6001_chess_outcome_prediction.ipynb` and select **Run All**.
+
+For non-interactive execution:
+
+```bash
+UV_CACHE_DIR=.uv-cache uv run jupyter execute \
+  --inplace --timeout=-1 CA6001_chess_outcome_prediction.ipynb
+```
+
+The first execution takes longer because it analyses and caches approximately 146,000 positions with Stockfish. Later executions reuse the cache.
+
+## Run with standard pip
+
+Python 3.11 is recommended.
+
+```bash
+python3.11 -m venv .venv
 source .venv/bin/activate
-# Windows PowerShell: .venv\Scripts\Activate.ps1
-python -m pip install -r requirements-notebook.txt
-jupyter lab
+python -m pip install --upgrade pip
+python -m pip install \
+  ipykernel jupyterlab matplotlib nbclient nbformat numpy pandas \
+  python-chess scikit-learn seaborn python-docx
+python -m jupyter lab
 ```
 
-只跑脚本可安装 `requirements.txt`。模型文件和数据都已包含，不需要重新下载数据或重新训练才能查看结果。
+On Windows PowerShell, activate with `.venv\Scripts\Activate.ps1` and set the engine path before running:
 
-## 已有最终测试结果
-
-同一批2,565场测试对局；两个信息集使用相同随机森林参数。
-
-| 指标 | 赛前6列 | 赛前＋开局46列 |
-|---|---:|---:|
-| Accuracy | 55.95% | 61.64% |
-| Macro-F1 | 0.4177 | 0.4495 |
-| Balanced Accuracy | 41.92% | 45.02% |
-| Draw recall | 8.33% | 5.30% |
-| Log Loss，越低越好 | 0.9101 | 0.8836 |
-
-![Feature information experiment](modelling_rf/run_20261025_20ply_01/figures/test_feature_comparison.png)
-
-整体预测改善，但132场和棋只识别7场，不能只看Accuracy。该时点实验是在更早一轮结果被查看后开展的探索；沿用的历史测试时间段不属于全新盲测。未进行显著性检验。
-
-## 目录
-
-```text
-Modelling_Evaluation.ipynb        已执行结果查看入口
-README.md
-requirements*.txt
-run_plan_a20.py                  生成20半回合输入
-validate_plan_a20.py              数据/棋谱/接口检查
-run_rf_modelling20.py             训练内CV、冻结、最终评估
-rebuild_data.py                   从原始CSV完整重建（临时目录隔离旧格式）
-predict_opening.py                用一场新的20半回合棋谱预测
-verify_snapshot.py               核对共享文件哈希和保存的测试指标
-src/                             清洗、棋局特征、模型与指标实现
-data/raw/                        原始CSV、来源和许可说明
-data/processed/                  去重后的完整审计表，不可整表喂给模型
-data/splits/split_manifest.csv   原固定时间分区与边界排除
-data/plan_a20/splits/             本版训练/验证 X、y、meta
-data/plan_a20/holdout/            本版冻结测试 X、y、meta
-tables/plan_a20/                 特征字典、排除日志、训练集统计
-artifacts/plan_a20/              特征契约、来源哈希、88项检查结果
-modelling_rf/run_20261025_20ply_01/
-  models/                        两种信息集的训练模型和最终重训模型
-  tables/                        CV、验证、测试、分类别指标及逐场预测
-  figures/                       指标图、混淆矩阵、重要性图
-  artifacts/                     流程、冻结配置和结果验证记录
-docs/                            数据协议、操作和结果说明
+```powershell
+$env:STOCKFISH_EXECUTABLE = "C:\path\to\stockfish.exe"
 ```
 
-## 复现与继续工作
+## Reproducibility
 
-```bash
-python verify_snapshot.py
-python validate_plan_a20.py
-# 新实验使用独立目录；local_*默认不进入Git
-python run_rf_modelling20.py --stage tune --output modelling_rf/local_my_experiment
-# 只有方案冻结并且小组决定正式评估后，才执行：
-python run_rf_modelling20.py --stage finalize --output modelling_rf/local_my_experiment
-```
-
-不要覆盖已有结果，不要根据测试成绩回头调参，不要将meta中的ID/FEN或完整审计表中的赛后字段输入模型。不要为了提高成绩删除和棋。更改特征需同步更新预处理和契约。
-
-## 对新的开局预测
-
-提供恰好20个半回合的合法SAN棋谱，例如：
-
-```bash
-python predict_opening.py --white-rating 1600 --black-rating 1500 --base-minutes 10 --increment-seconds 0 --moves "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6 c3 O-O h3 Nb8 d4 Nbd7"
-```
-
-输出预测类别及三类概率，不会读取测试集。
-
-## 数据来源
-
-[Chess Game Dataset (Lichess), Mitchell J / datasnaek](https://www.kaggle.com/datasets/datasnaek/chess)，发布页标注CC0。
-原始20,058行，清洗后19,111个对局ID。本版过滤后训练11,936、验证2,549、测试2,565场。详见 [数据协议](docs/DATA_PROTOCOL.md) 和 [原始来源](data/raw/SOURCE.md)。
-
-仓库未替团队代码指定额外的开源许可；数据仍按其发布者标注的许可使用。此交接不包含课程正式报告。
+- Random seed: `6001`.
+- Game split: stratified 70% training, 15% validation, and 15% test.
+- Stockfish configuration: version 19, one thread, 1,000 nodes, WDL enabled.
+- Dataset SHA-256: `e7aadff104a610afb5403caf81c1461babecb0dc87760ff5eea7dc0e7a4a8129`.
+- Stockfish SHA-256: `0f83d24cc46d2c66c60f16001af5444873bc112b7d028594513426894c12da19`.
