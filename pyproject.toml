@@ -13,6 +13,7 @@ dependencies = [
     "pandas>=2.2,<4",
     "python-chess>=1.999,<2",
     "python-docx>=1.1,<2",
+    "python-pptx>=1.0,<2",
     "scikit-learn>=1.5,<2",
     "seaborn>=0.13,<1",
 ]
